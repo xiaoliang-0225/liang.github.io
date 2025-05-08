@@ -1,5 +1,6 @@
 /******************************************************/
 /*顶部栏*/
+/*
 #page-header.nav-fixed #nav{
     background: rgba(246, 239, 246, 0.61) !important;
     backdrop-filter: blur(8px) !important;
@@ -19,8 +20,9 @@
     background: rgba(79, 76, 79, 0.35) !important;
     backdrop-filter: blur(8px) !important;
 }
-
+*/
 /*手机模式侧边栏*/
+/*
 #sidebar #sidebar-menus.open{
     background:rgba(246, 239, 246, 0.75) !important;
     backdrop-filter: blur(3px);
@@ -32,7 +34,9 @@
     backdrop-filter: blur(3px);
     border-radius: 6px 0 0 6px;
 }
+ */
 /*侧边控制按钮*/
+/*
 #rightside > #rightside-config-show > #rightside_config,
 #rightside > #rightside-config-show > #to_comment,
 #rightside > #rightside-config-show > #go-up,
@@ -54,7 +58,9 @@
     background: opacity(0.3);
     backdrop-filter: blur(3px);
 }
+ */
 /*搜索*/
+/*
 #local-search .search-dialog,
 #local-search .search-dialog .local-search-box input{
     background:rgba(246, 239, 246, 0.75) !important;
@@ -68,6 +74,7 @@
     backdrop-filter: blur(3px);
     border-radius: 6px 6px;
 }
+ */
 /*******************************************************/
 
 
@@ -95,3 +102,26 @@
 #footer #footer-wrap a {
     color: var(--font-color);
 }
+
+/* 一级菜单居中 */
+#nav .menus_items {
+    /* position: absolute !important;*/
+    width: fit-content !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+}
+/* 子菜单横向展示 */
+#nav .menus_items .menus_item:hover .menus_item_child {
+    display: flex !important;
+}
+/* 这里的2是代表导航栏的第2个元素，即有子菜单的元素，可以按自己需求修改 */
+.menus_items .menus_item:nth-child(2) .menus_item_child {
+    left: -125px;
+}
+
+/* 翻页按钮居中 */
+#pagination {
+    width: 100%;
+    margin: auto;
+}
+

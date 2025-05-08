@@ -1,0 +1,184 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>标签: 枚举 | 小梁的空间</title><meta name="author" content="小梁"><meta name="copyright" content="小梁"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="幼稚的小孩儿">
+<meta property="og:type" content="website">
+<meta property="og:title" content="小梁的空间">
+<meta property="og:url" content="https://xiaoliang-0225.github.io/liang.github.io/tags/%E6%9E%9A%E4%B8%BE/index.html">
+<meta property="og:site_name" content="小梁的空间">
+<meta property="og:description" content="幼稚的小孩儿">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/on_the_way/favicon.png">
+<meta property="article:author" content="小梁">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/on_the_way/favicon.png"><link rel="shortcut icon" href="/liang.github.io/img/favicon.png"><link rel="canonical" href="https://xiaoliang-0225.github.io/liang.github.io/tags/%E6%9E%9A%E4%B8%BE/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/liang.github.io/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/liang.github.io/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '标签: 枚举',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'tag'
+}</script><link rel="stylesheet" href="/liang.github.io/css/custom/twikoo_beautify.css"  media="defer" onload="this.media='all'"><link rel="stylesheet" href="/liang.github.io/css/waves.css"><link rel="stylesheet" href="/liang.github.io/css/universe.css"><link rel="stylesheet" href="/liang.github.io/css/footer_custom.css"><link rel="stylesheet" href="/liang.github.io/css/custom.css"><!-- include ./custom/sun_moon.pug--><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/liang.github.io/atom.xml" title="小梁的空间" type="application/atom+xml">
+<link rel="alternate" href="/liang.github.io/rss2.xml" title="小梁的空间" type="application/rss+xml">
+</head><body><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><!-- img.loading-img(class='nolazyload' src= (loading_img ? url_for(loading_img) : "/source/img/head_portrait.jpg") ) //- 替换为你的头像地址，或者在自定义引入的custom.css进行覆盖。--><img class="loading-img nolazyload" src="/liang.github.io/img/head_portrait.jpg"/><div class="loading-image-dot"></div><div id="loading-percentage">0%</div></div></div><script async="async">const loadingPercentage = document.getElementById("loading-percentage");
+loadingPercentage.style.color = "black";
+let loadingPercentageTimer = setInterval(function() {
+    var progressBar = document.querySelector(".pace-progress");
+    if (!progressBar) return
+    var currentValue = progressBar.getAttribute("data-progress-text");
+    if (currentValue !== loadingPercentage.textContent) {
+        loadingPercentage.textContent = currentValue;
+        if (currentValue === "100%") {
+            clearInterval(loadingPercentageTimer);
+        }
+    }
+}, 100);
+const preloader = {
+    endLoading: () => {
+        document.body.style.overflow = 'auto';
+        document.getElementById('loading-box').classList.add("loaded")
+    },
+    initLoading: () => {
+        document.body.style.overflow = '';
+        document.getElementById('loading-box').classList.remove("loaded")
+    }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();}, 6000)
+document.getElementById('loading-box').addEventListener('click',()=> {preloader.endLoading()})
+if (false) {
+    document.addEventListener('pjax:send', () => { preloader.initLoading() })
+    document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/on_the_way/favicon.png" onerror="this.onerror=null;this.src='https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/on_the_way/404.png'" alt="avatar"/></div><div class="site-data text-center"><a href="/liang.github.io/archives/"><div class="headline">文章</div><div class="length-num">21</div></a><a href="/liang.github.io/tags/"><div class="headline">标签</div><div class="length-num">17</div></a><a href="/liang.github.io/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/liang.github.io/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/liang.github.io/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/liang.github.io/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/liang.github.io/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/liang.github.io/gallery/"><i class="fa-fw fa fa-camera-retro"></i><span> 相册</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/liang.github.io/links/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/liang.github.io/comment/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/liang.github.io/atom.xml"><i class="fa-fw fas fa-rss"></i><span> RSS订阅</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="not-home-page" id="page-header" style="background-image: url(https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/on_the_way/index_img.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/liang.github.io/"><img class="site-icon" src="/liang.github.io/img/20151215110435616.gif" alt="Logo"><span class="site-name">小梁的空间</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/liang.github.io/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/liang.github.io/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/liang.github.io/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/liang.github.io/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/liang.github.io/gallery/"><i class="fa-fw fa fa-camera-retro"></i><span> 相册</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/liang.github.io/links/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/liang.github.io/comment/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/liang.github.io/atom.xml"><i class="fa-fw fas fa-rss"></i><span> RSS订阅</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="page-site-info"><h1 id="site-title">枚举</h1></div></header><main class="layout" id="content-inner"><div id="tag"><div class="article-sort-title">标签 - 枚举</div><div class="article-sort"><div class="article-sort-item year">2022</div><div class="article-sort-item"><a class="article-sort-item-img" href="/liang.github.io/enum/" title="EnumUtil"><img src="https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/%E8%83%8C%E6%99%AF/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5/codeenum.jpg" alt="EnumUtil" onerror="this.onerror=null;this.src='https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/on_the_way/404.png'"></a><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2022-09-06T08:53:00.000Z" title="发表于 2022-09-06 16:53:00">2022-09-06</time></div><a class="article-sort-item-title" href="/liang.github.io/enum/" title="EnumUtil">EnumUtil</a></div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/on_the_way/favicon.png" onerror="this.onerror=null;this.src='https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/on_the_way/404.png'" alt="avatar"/></div><div class="author-info-name">小梁</div><div class="author-info-description">幼稚的小孩儿</div><div class="site-data"><a href="/liang.github.io/archives/"><div class="headline">文章</div><div class="length-num">21</div></a><a href="/liang.github.io/tags/"><div class="headline">标签</div><div class="length-num">17</div></a><a href="/liang.github.io/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/liang.github.io/Markdown%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/" title="Markdown基础语法"><img src="https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/article/markdown.png" onerror="this.onerror=null;this.src='https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/on_the_way/404.png'" alt="Markdown基础语法"/></a><div class="content"><a class="title" href="/liang.github.io/Markdown%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/" title="Markdown基础语法">Markdown基础语法</a><time datetime="2025-05-08T01:36:38.000Z" title="发表于 2025-05-08 09:36:38">2025-05-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/liang.github.io/IDEA%20%E6%B0%B8%E4%B9%85%E6%BF%80%E6%B4%BB/" title="IDEA永久激活"><img src="https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/%E8%83%8C%E6%99%AF/idea.png" onerror="this.onerror=null;this.src='https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/on_the_way/404.png'" alt="IDEA永久激活"/></a><div class="content"><a class="title" href="/liang.github.io/IDEA%20%E6%B0%B8%E4%B9%85%E6%BF%80%E6%B4%BB/" title="IDEA永久激活">IDEA永久激活</a><time datetime="2023-05-08T01:36:38.000Z" title="发表于 2023-05-08 09:36:38">2023-05-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/liang.github.io/enum/" title="EnumUtil"><img src="https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/%E8%83%8C%E6%99%AF/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5/codeenum.jpg" onerror="this.onerror=null;this.src='https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/on_the_way/404.png'" alt="EnumUtil"/></a><div class="content"><a class="title" href="/liang.github.io/enum/" title="EnumUtil">EnumUtil</a><time datetime="2022-09-06T08:53:00.000Z" title="发表于 2022-09-06 16:53:00">2022-09-06</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/liang.github.io/word%E5%AF%BC%E5%87%BA/" title="word导出"><img src="https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/on_the_way/index_img.jpg" onerror="this.onerror=null;this.src='https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/on_the_way/404.png'" alt="word导出"/></a><div class="content"><a class="title" href="/liang.github.io/word%E5%AF%BC%E5%87%BA/" title="word导出">word导出</a><time datetime="2022-07-25T06:59:41.000Z" title="发表于 2022-07-25 14:59:41">2022-07-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/liang.github.io/Stream%E6%B5%81/" title="Stream流"><img src="https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/on_the_way/index_img.jpg" onerror="this.onerror=null;this.src='https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/on_the_way/404.png'" alt="Stream流"/></a><div class="content"><a class="title" href="/liang.github.io/Stream%E6%B5%81/" title="Stream流">Stream流</a><time datetime="2022-06-27T06:13:31.000Z" title="发表于 2022-06-27 14:13:31">2022-06-27</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            <a class="card-more-btn" href="/liang.github.io/categories/" title="查看更多">
+      <i class="fas fa-angle-right"></i></a>
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/liang.github.io/categories/IDEA/"><span class="card-category-list-name">IDEA</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/liang.github.io/categories/Java/"><span class="card-category-list-name">Java</span><span class="card-category-list-count">15</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/liang.github.io/categories/Java/Client/"><span class="card-category-list-name">Client</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/liang.github.io/categories/Java/RabbitMQ/"><span class="card-category-list-name">RabbitMQ</span><span class="card-category-list-count">4</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/liang.github.io/categories/Java/Spring/"><span class="card-category-list-name">Spring</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/liang.github.io/categories/Java/Stream/"><span class="card-category-list-name">Stream</span><span class="card-category-list-count">1</span></a></li></ul></li><li class="card-category-list-item "><a class="card-category-list-link" href="/liang.github.io/categories/hexo/"><span class="card-category-list-name">hexo</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/liang.github.io/categories/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/"><span class="card-category-list-name">对象存储</span><span class="card-category-list-count">1</span></a></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/liang.github.io/tags/Minio/" style="font-size: 1.1em; color: #999">Minio</a> <a href="/liang.github.io/tags/%E5%8F%8D%E5%B0%84/" style="font-size: 1.1em; color: #999">反射</a> <a href="/liang.github.io/tags/IO/" style="font-size: 1.1em; color: #999">IO</a> <a href="/liang.github.io/tags/%E4%BA%8B%E5%8A%A1%E4%BB%A3%E7%90%86/" style="font-size: 1.1em; color: #999">事务代理</a> <a href="/liang.github.io/tags/%E9%9B%86%E5%90%88/" style="font-size: 1.1em; color: #999">集合</a> <a href="/liang.github.io/tags/MQ/" style="font-size: 1.5em; color: #99a9bf">MQ</a> <a href="/liang.github.io/tags/JDK8/" style="font-size: 1.1em; color: #999">JDK8</a> <a href="/liang.github.io/tags/Mysql/" style="font-size: 1.1em; color: #999">Mysql</a> <a href="/liang.github.io/tags/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" style="font-size: 1.1em; color: #999">软件安装</a> <a href="/liang.github.io/tags/zip4j/" style="font-size: 1.1em; color: #999">zip4j</a> <a href="/liang.github.io/tags/%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/" style="font-size: 1.3em; color: #99a1ac">文件操作</a> <a href="/liang.github.io/tags/%E6%94%AF%E4%BB%98%E5%AE%9D/" style="font-size: 1.1em; color: #999">支付宝</a> <a href="/liang.github.io/tags/%E6%9E%9A%E4%B8%BE/" style="font-size: 1.1em; color: #999">枚举</a> <a href="/liang.github.io/tags/OKHttp/" style="font-size: 1.1em; color: #999">OKHttp</a> <a href="/liang.github.io/tags/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/" style="font-size: 1.1em; color: #999">问题记录</a> <a href="/liang.github.io/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" style="font-size: 1.1em; color: #999">博客搭建</a> <a href="/liang.github.io/tags/Markdown/" style="font-size: 1.1em; color: #999">Markdown</a></div></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">21</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-05-08T06:50:50.092Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="footer_custom_text"><div id="runtime"></div></div><p id="ghbdages"><a class="github-badge" target="_blank" href="https://hexo.io/" style="margin-inline:5px"><img src="https://img.shields.io/badge/Frame-Hexo-blue?style=flat&amp;logo=hexo" title="博客框架为Hexo_v7.3.0"/></a><a class="github-badge" target="_blank" href="https://butterfly.js.org/" style="margin-inline:5px"><img src="https://img.shields.io/badge/Theme-Butterfly-6513df?style=flat&amp;logo=bitdefender" title="主题版本Butterfly_v5.3.5"/></a><a class="github-badge" target="_blank" href="https://github.com/" style="margin-inline:5px"><img src="https://img.shields.io/badge/Source-Github-d021d6?style=flat&amp;logo=GitHub" title="本站项目由Github托管"/></a><a class="github-badge" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" style="margin-inline:5px"><img src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&amp;logo=Claris" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"/></a></p></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><!--a.icon-V.hidden(onclick='switchNightMode()',  title=_p('rightside.night_mode_title'))// svg(width='25', height='25', viewBox='0 0 1024 1024')
+  //  use#modeicon(xlink:href='#icon-moon')--><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/liang.github.io/js/utils.js"></script><script src="/liang.github.io/js/main.js"></script><div class="js-pjax"></div><script src="/liang.github.io/js/easy-Danmaku.js"></script><script src="/liang.github.io/js/easy.js"></script><canvas id="universe"></canvas><script src="/liang.github.io/js/universe.js"></script><script src="/liang.github.io/js/footer_custom.js"></script><script src="/liang.github.io/js/custom/MemorialDayMode.js"></script><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-heart.min.js" async="async" mobile="true"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

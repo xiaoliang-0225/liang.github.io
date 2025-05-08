@@ -1,0 +1,248 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>小梁的空间</title><meta name="author" content="小梁"><meta name="copyright" content="小梁"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="幼稚的小孩儿">
+<meta property="og:type" content="website">
+<meta property="og:title" content="小梁的空间">
+<meta property="og:url" content="https://xiaoliang-0225.github.io/liang.github.io/page/2/index.html">
+<meta property="og:site_name" content="小梁的空间">
+<meta property="og:description" content="幼稚的小孩儿">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/on_the_way/favicon.png">
+<meta property="article:author" content="小梁">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/on_the_way/favicon.png"><link rel="shortcut icon" href="/liang.github.io/img/favicon.png"><link rel="canonical" href="https://xiaoliang-0225.github.io/liang.github.io/page/2/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/liang.github.io/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/liang.github.io/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '小梁的空间',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'home'
+}</script><link rel="stylesheet" href="/liang.github.io/css/custom/twikoo_beautify.css"  media="defer" onload="this.media='all'"><link rel="stylesheet" href="/liang.github.io/css/waves.css"><link rel="stylesheet" href="/liang.github.io/css/universe.css"><link rel="stylesheet" href="/liang.github.io/css/footer_custom.css"><link rel="stylesheet" href="/liang.github.io/css/custom.css"><!-- include ./custom/sun_moon.pug--><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/liang.github.io/atom.xml" title="小梁的空间" type="application/atom+xml">
+<link rel="alternate" href="/liang.github.io/rss2.xml" title="小梁的空间" type="application/rss+xml">
+</head><body><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><!-- img.loading-img(class='nolazyload' src= (loading_img ? url_for(loading_img) : "/source/img/head_portrait.jpg") ) //- 替换为你的头像地址，或者在自定义引入的custom.css进行覆盖。--><img class="loading-img nolazyload" src="/liang.github.io/img/head_portrait.jpg"/><div class="loading-image-dot"></div><div id="loading-percentage">0%</div></div></div><script async="async">const loadingPercentage = document.getElementById("loading-percentage");
+loadingPercentage.style.color = "black";
+let loadingPercentageTimer = setInterval(function() {
+    var progressBar = document.querySelector(".pace-progress");
+    if (!progressBar) return
+    var currentValue = progressBar.getAttribute("data-progress-text");
+    if (currentValue !== loadingPercentage.textContent) {
+        loadingPercentage.textContent = currentValue;
+        if (currentValue === "100%") {
+            clearInterval(loadingPercentageTimer);
+        }
+    }
+}, 100);
+const preloader = {
+    endLoading: () => {
+        document.body.style.overflow = 'auto';
+        document.getElementById('loading-box').classList.add("loaded")
+    },
+    initLoading: () => {
+        document.body.style.overflow = '';
+        document.getElementById('loading-box').classList.remove("loaded")
+    }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();}, 6000)
+document.getElementById('loading-box').addEventListener('click',()=> {preloader.endLoading()})
+if (false) {
+    document.addEventListener('pjax:send', () => { preloader.initLoading() })
+    document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/on_the_way/favicon.png" onerror="this.onerror=null;this.src='https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/on_the_way/404.png'" alt="avatar"/></div><div class="site-data text-center"><a href="/liang.github.io/archives/"><div class="headline">文章</div><div class="length-num">21</div></a><a href="/liang.github.io/tags/"><div class="headline">标签</div><div class="length-num">17</div></a><a href="/liang.github.io/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/liang.github.io/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/liang.github.io/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/liang.github.io/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/liang.github.io/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/liang.github.io/gallery/"><i class="fa-fw fa fa-camera-retro"></i><span> 相册</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/liang.github.io/links/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/liang.github.io/comment/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/liang.github.io/atom.xml"><i class="fa-fw fas fa-rss"></i><span> RSS订阅</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/on_the_way/index_img.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/liang.github.io/"><img class="site-icon" src="/liang.github.io/img/20151215110435616.gif" alt="Logo"><span class="site-name">小梁的空间</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/liang.github.io/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/liang.github.io/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/liang.github.io/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/liang.github.io/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/liang.github.io/gallery/"><i class="fa-fw fa fa-camera-retro"></i><span> 相册</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/liang.github.io/links/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/liang.github.io/comment/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/liang.github.io/atom.xml"><i class="fa-fw fas fa-rss"></i><span> RSS订阅</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="site-info"><h1 id="site-title">小梁的空间</h1><div id="site-subtitle"><span id="subtitle"></span></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="post_cover left"><a href="/liang.github.io/File%E6%96%87%E4%BB%B6%E8%BD%AC%E6%8D%A2/" title="File文件转换"><img class="post-bg" src="https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/%E8%83%8C%E6%99%AF/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5/file.png" onerror="this.onerror=null;this.src='https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/on_the_way/404.png'" alt="File文件转换"></a></div><div class="recent-post-info"><a class="article-title" href="/liang.github.io/File%E6%96%87%E4%BB%B6%E8%BD%AC%E6%8D%A2/" title="File文件转换">File文件转换</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-06-17T05:59:25.000Z" title="发表于 2022-06-17 13:59:25">2022-06-17</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/liang.github.io/categories/Java/">Java</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a href="/liang.github.io/File%E6%96%87%E4%BB%B6%E8%BD%AC%E6%8D%A2/#post-comment"><span class="valine-comment-count" data-xid="/liang.github.io/File%E6%96%87%E4%BB%B6%E8%BD%AC%E6%8D%A2/"><i class="fa-solid fa-spinner fa-spin"></i></span></a><span class="article-meta-label"> 条评论</span></span></div><div class="content"> MultipartFile转File File转MultipartFile InputSteam转File   123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116117118119public class MultipartFileUtil &#123;    /**     * MultipartFile 转 File     *     * @param file     * @throws Exception     */    public static File multipartFileToFile(MultipartFile file)...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/liang.github.io/minio/" title="Minio"><img class="post-bg" src="https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/%E8%83%8C%E6%99%AF/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5/minio.png" onerror="this.onerror=null;this.src='https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/on_the_way/404.png'" alt="Minio"></a></div><div class="recent-post-info"><a class="article-title" href="/liang.github.io/minio/" title="Minio">Minio</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-06-17T05:47:00.000Z" title="发表于 2022-06-17 13:47:00">2022-06-17</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/liang.github.io/categories/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/">对象存储</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a href="/liang.github.io/minio/#post-comment"><span class="valine-comment-count" data-xid="/liang.github.io/minio/"><i class="fa-solid fa-spinner fa-spin"></i></span></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">minio为开源的高可用分部署对象存储服务组件，已经提供了分布式部署的解决方案，实现高可靠、高可用的资源存储，MinIO以极简主义为指导进行设计，追求极致的维护精简性和卓越的读写性能表现  依赖 1234567&lt;!-- minio依赖--&gt;&lt;dependency&gt;  &lt;groupId&gt;io.minio&lt;/groupId&gt;  &lt;artifactId&gt;minio&lt;/artifactId&gt;  &lt;version&gt;8.3.3&lt;/version&gt;&lt;/dependency&gt;&lt;!-- 官方 miniodemo需要的依赖--&gt; yaml配置 12345678oss:  enabled: true  name: minio  tenant-mode: false  endpoint: http://127.0.0.1:9000/  access-key: accessKey  secret-key: secretKey  bucket-name:...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/liang.github.io/%E5%8E%8B%E7%BC%A9%E5%8C%85%E8%A7%A3%E5%8E%8Bzip-rar/" title="压缩包解压zip&amp;rar"><img class="post-bg" src="https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/on_the_way/index_img.jpg" onerror="this.onerror=null;this.src='https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/on_the_way/404.png'" alt="压缩包解压zip&amp;rar"></a></div><div class="recent-post-info"><a class="article-title" href="/liang.github.io/%E5%8E%8B%E7%BC%A9%E5%8C%85%E8%A7%A3%E5%8E%8Bzip-rar/" title="压缩包解压zip&amp;rar">压缩包解压zip&amp;rar</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-06-17T03:28:12.000Z" title="发表于 2022-06-17 11:28:12">2022-06-17</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/liang.github.io/categories/Java/">Java</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a href="/liang.github.io/%E5%8E%8B%E7%BC%A9%E5%8C%85%E8%A7%A3%E5%8E%8Bzip-rar/#post-comment"><span class="valine-comment-count" data-xid="/liang.github.io/%E5%8E%8B%E7%BC%A9%E5%8C%85%E8%A7%A3%E5%8E%8Bzip-rar/"><i class="fa-solid fa-spinner fa-spin"></i></span></a><span class="article-meta-label"> 条评论</span></span></div><div class="content"> zip 依赖 123456&lt;!--zip4j依赖,解压zip压缩--&gt;&lt;dependency&gt;    &lt;groupId&gt;net.lingala.zip4j&lt;/groupId&gt;    &lt;artifactId&gt;zip4j&lt;/artifactId&gt;    &lt;version&gt;1.3.2&lt;/version&gt;&lt;/dependency&gt; 实现方法 解压 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950 /** * 解压zip文件 * @param srcPath 源文件地址 * @param targetDir 目标文件地址 * @return */public static String unZip(String srcPath, String targetDir) &#123;    String name = &quot;/&quot;;   ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/liang.github.io/OkHttpClient/" title="OkHttpClient"><img class="post-bg" src="https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/%E8%83%8C%E6%99%AF/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5/okHttp.png" onerror="this.onerror=null;this.src='https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/on_the_way/404.png'" alt="OkHttpClient"></a></div><div class="recent-post-info"><a class="article-title" href="/liang.github.io/OkHttpClient/" title="OkHttpClient">OkHttpClient</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-05-12T01:27:10.000Z" title="发表于 2022-05-12 09:27:10">2022-05-12</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/liang.github.io/categories/Java/">Java</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/liang.github.io/categories/Java/Client/">Client</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a href="/liang.github.io/OkHttpClient/#post-comment"><span class="valine-comment-count" data-xid="/liang.github.io/OkHttpClient/"><i class="fa-solid fa-spinner fa-spin"></i></span></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">OkHttpClient OkHttpClient是一个高效的HTTP客户端  支持HTTP/2，允许所有同一个主机地址的请求共享同一个 socket 连接 连接池减少请求延时 透明的GZIP压缩减少响应数据的大小 缓存响应内容，避免一些完全重复的请求 当网络出现问题时 OkHttp，会自动恢复一般的连接问题  依赖 12345&lt;dependency&gt;        &lt;groupId&gt;com.squareup.okhttp3&lt;/groupId&gt;        &lt;artifactId&gt;okhttp&lt;/artifactId&gt;       ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/liang.github.io/Mysql%E7%B4%A2%E5%BC%95/" title="MySQL索引"><img class="post-bg" src="https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/article/mysql.png" onerror="this.onerror=null;this.src='https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/on_the_way/404.png'" alt="MySQL索引"></a></div><div class="recent-post-info"><a class="article-title" href="/liang.github.io/Mysql%E7%B4%A2%E5%BC%95/" title="MySQL索引">MySQL索引</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-05-08T01:36:38.000Z" title="发表于 2022-05-08 09:36:38">2022-05-08</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/liang.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a href="/liang.github.io/Mysql%E7%B4%A2%E5%BC%95/#post-comment"><span class="valine-comment-count" data-xid="/liang.github.io/Mysql%E7%B4%A2%E5%BC%95/"><i class="fa-solid fa-spinner fa-spin"></i></span></a><span class="article-meta-label"> 条评论</span></span></div><div class="content"> 索引 MYSQL的索引类型  普通索引 INDEX 唯一索引 UNIQUE 主键索引 组合索引 全文索引  普通索引 普通索引是最基本的索引，没用任何的限制。在创建的时候可以指定索引的长度。length 为可选参数，表示索引的长度（索引长度表示数组的元素个数），只有字符串类型的字段才能指定索引长度，如果是 BLOB 和 TEXT 类型，必须指定 length。 创建索引的时候需要注意：  如果指定单列索引长度，length 必须小于这个字段所允许的最大字符个数。 查询索引：SHOW INDEX FROM table_name  直接创建索引 CREATE INDEX index_name ON table(column(length)) 123示例给 student 表中的 name 创建一个索引，索引名称为 stu_name_index create index stu_name_index ON student(name) 修改表添加索引 ALTER TABLE table_name ADD INDEX index_name...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/liang.github.io/RabbitMQ%E9%9B%86%E7%BE%A4%E6%90%AD%E5%BB%BA/" title="RabbitMQ集群搭建"><img class="post-bg" src="https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/on_the_way/index_img.jpg" onerror="this.onerror=null;this.src='https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/on_the_way/404.png'" alt="RabbitMQ集群搭建"></a></div><div class="recent-post-info"><a class="article-title" href="/liang.github.io/RabbitMQ%E9%9B%86%E7%BE%A4%E6%90%AD%E5%BB%BA/" title="RabbitMQ集群搭建">RabbitMQ集群搭建</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-03-26T03:36:56.000Z" title="发表于 2022-03-26 11:36:56">2022-03-26</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/liang.github.io/categories/Java/">Java</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/liang.github.io/categories/Java/RabbitMQ/">RabbitMQ</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a href="/liang.github.io/RabbitMQ%E9%9B%86%E7%BE%A4%E6%90%AD%E5%BB%BA/#post-comment"><span class="valine-comment-count" data-xid="/liang.github.io/RabbitMQ%E9%9B%86%E7%BE%A4%E6%90%AD%E5%BB%BA/"><i class="fa-solid fa-spinner fa-spin"></i></span></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">LINUX 搭建集群 修改每台机器的主机名称 1vi /etc/hostname  在每台服务器中配置其他服务器 hosts文件，让各个节点都能互相识别对方 1vi /etc/hosts 下图效果  确保各个节点的cookie文件使用的是同一个值 {@node2[服务主机名称] } 1scp /var/ib/rabbitmq/.erlang.cookie root@node2:/ar/ib/rabbitmg/.erlang.cookie I 启动RabbitMQ服务,顺带启动Erlang虚拟机和RbbitMQ应用服务 1rabbitmq-server -detached 在其他主机执行 1234rabbitmqctl stop_ app # 关闭服务  (rabbitmqctl stop会将Erlang 虚拟机关闭, rabbitmqct! stop. app只关闭RabbitMQ服务)rabbitmqctl reset # 重置rabbitmqctl join. _cluster rabbit@node1 #[主机名称] #加入到第一台主机中rabbitmqctl...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/liang.github.io/%E6%94%AF%E4%BB%98%E5%AE%9D%E6%94%AF%E4%BB%98%E6%8E%A5%E5%8F%A3/" title="支付宝支付接口"><img class="post-bg" src="https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/article/%E6%94%AF%E4%BB%98%E5%AE%9D.png" onerror="this.onerror=null;this.src='https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/on_the_way/404.png'" alt="支付宝支付接口"></a></div><div class="recent-post-info"><a class="article-title" href="/liang.github.io/%E6%94%AF%E4%BB%98%E5%AE%9D%E6%94%AF%E4%BB%98%E6%8E%A5%E5%8F%A3/" title="支付宝支付接口">支付宝支付接口</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-03-11T03:44:49.000Z" title="发表于 2022-03-11 11:44:49">2022-03-11</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/liang.github.io/categories/%E7%AC%AC%E4%B8%89%E6%96%B9%E6%94%AF%E4%BB%98/">第三方支付</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a href="/liang.github.io/%E6%94%AF%E4%BB%98%E5%AE%9D%E6%94%AF%E4%BB%98%E6%8E%A5%E5%8F%A3/#post-comment"><span class="valine-comment-count" data-xid="/liang.github.io/%E6%94%AF%E4%BB%98%E5%AE%9D%E6%94%AF%E4%BB%98%E6%8E%A5%E5%8F%A3/"><i class="fa-solid fa-spinner fa-spin"></i></span></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">官网： 网页&amp;移动应用  接口使用 支付流程   前端请求访问控制层 “/alipay” 接口 1.1 初始化支付 DefaultAlipayClient 对象 1.2 使用 AlipayTradePagePayRequest（网页支付请求对象） 对象设置请求参数   设置返回地址和异步返回地址   设置业务内容（json）   1.3 获取请求体的html代码 1.4 响应请求体后通过   接受返回结果 2.1 支付宝支付后会调用返回接口（同步接口异常会调用异步返回接口） 2.2 通过Map获取参数 2.3 验签 AlipaySignature 对象的 rsaCheckV1() 验签  验证成功 执行自定义的代码逻辑 验证失败 响应错误信息    使用  引入依赖  1234567891011&lt;dependency&gt;    &lt;groupId&gt;com.alipay.sdk&lt;/groupId&gt;    &lt;artifactId&gt;alipay-sdk-java&lt;/artifactId&gt;   ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/liang.github.io/RabbitMQ%20%E5%A6%82%E4%BD%95%E4%BF%9D%E8%AF%81%E6%B6%88%E6%81%AF%E7%9A%84%E5%8F%AF%E9%9D%A0%E4%BC%A0%E8%BE%93/" title="RabbitMQ 如何保证消息的可靠传输"><img class="post-bg" src="https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/on_the_way/index_img.jpg" onerror="this.onerror=null;this.src='https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/on_the_way/404.png'" alt="RabbitMQ 如何保证消息的可靠传输"></a></div><div class="recent-post-info"><a class="article-title" href="/liang.github.io/RabbitMQ%20%E5%A6%82%E4%BD%95%E4%BF%9D%E8%AF%81%E6%B6%88%E6%81%AF%E7%9A%84%E5%8F%AF%E9%9D%A0%E4%BC%A0%E8%BE%93/" title="RabbitMQ 如何保证消息的可靠传输">RabbitMQ 如何保证消息的可靠传输</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-07-10T16:00:00.000Z" title="发表于 2020-07-11 00:00:00">2020-07-11</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/liang.github.io/categories/Java/">Java</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/liang.github.io/categories/Java/RabbitMQ/">RabbitMQ</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a href="/liang.github.io/RabbitMQ%20%E5%A6%82%E4%BD%95%E4%BF%9D%E8%AF%81%E6%B6%88%E6%81%AF%E7%9A%84%E5%8F%AF%E9%9D%A0%E4%BC%A0%E8%BE%93/#post-comment"><span class="valine-comment-count" data-xid="/liang.github.io/RabbitMQ%20%E5%A6%82%E4%BD%95%E4%BF%9D%E8%AF%81%E6%B6%88%E6%81%AF%E7%9A%84%E5%8F%AF%E9%9D%A0%E4%BC%A0%E8%BE%93/"><i class="fa-solid fa-spinner fa-spin"></i></span></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">可靠传输 在RabbitMQ中，一个消息从产生到被消费大致会经过三个步骤，生产者生产消息，消息投递到RabbitMQ，RabbitMQ再将消息推送到消费者（或消费者拉取），最终消费者将这条消息成功消费。消息的可靠传输，就是确保消息能够百分百从生产者发送到服务器，在从服务器发送到消费者。 所以消息丢失也可以划分为三种情况——生产者、消息队列、消费者。  生产者投递消息失败 事务机制 使用 RabbitMQ 的事务功能，此时可以选择用 RabbitMQ 提供的事务功能，就是生产者发送数据之前开启 RabbitMQ 事务 channel.txSelect，然后发送消息，如果消息没有成功被 RabbitMQ 接收到，那么生产者会收到异常报错，此时就可以回滚事务 channel.txRollback，然后重试发送消息；如果收到了消息，那么可以提交事务 channel.txCommit。 12345678910`// 开启事务``channel.txSelect();``try &#123;`    `// 发送消息``&#125; catch(Exception e) &#123;`  ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/liang.github.io/RabbitMQ%E5%8F%91%E5%B8%83%E7%A1%AE%E8%AE%A4/" title="RabbitMQ发布确认"><img class="post-bg" src="https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/on_the_way/index_img.jpg" onerror="this.onerror=null;this.src='https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/on_the_way/404.png'" alt="RabbitMQ发布确认"></a></div><div class="recent-post-info"><a class="article-title" href="/liang.github.io/RabbitMQ%E5%8F%91%E5%B8%83%E7%A1%AE%E8%AE%A4/" title="RabbitMQ发布确认">RabbitMQ发布确认</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-03-22T08:42:27.000Z" title="发表于 2020-03-22 16:42:27">2020-03-22</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/liang.github.io/categories/Java/">Java</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/liang.github.io/categories/Java/RabbitMQ/">RabbitMQ</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a href="/liang.github.io/RabbitMQ%E5%8F%91%E5%B8%83%E7%A1%AE%E8%AE%A4/#post-comment"><span class="valine-comment-count" data-xid="/liang.github.io/RabbitMQ%E5%8F%91%E5%B8%83%E7%A1%AE%E8%AE%A4/"><i class="fa-solid fa-spinner fa-spin"></i></span></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">消息确认机制(Confirm模式) 前提条件  通过信道将生产者设置队列持久化  1channel.queueDeclare(QUEUE_NAME,true,false,false,null);  通过信道将生产者设置队列的消息持久化  12MessageProperties.PERSISTENT_TEXT_PLAIN(持久化)channel.basicPublish(exchange,queue, MessageProperties.PERSISTENT_TEXT_PLAIN,message); 发布确认 123456789101112131415161718192021222324252627282930313233/** * @author: yiLiang * @Title: RabbitMQUtils * 连接工厂创建信道 */public class RabbitMQUtils &#123;    // 队列的名称    public static final String QUEUE_NAME = &quot;hello&quot;;    public...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/liang.github.io/RabbitMQ%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/" title="RabbitMQ的基本使用"><img class="post-bg" src="https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/on_the_way/index_img.jpg" onerror="this.onerror=null;this.src='https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/on_the_way/404.png'" alt="RabbitMQ的基本使用"></a></div><div class="recent-post-info"><a class="article-title" href="/liang.github.io/RabbitMQ%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/" title="RabbitMQ的基本使用">RabbitMQ的基本使用</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-03-20T08:59:09.000Z" title="发表于 2020-03-20 16:59:09">2020-03-20</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/liang.github.io/categories/Java/">Java</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/liang.github.io/categories/Java/RabbitMQ/">RabbitMQ</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a href="/liang.github.io/RabbitMQ%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/#post-comment"><span class="valine-comment-count" data-xid="/liang.github.io/RabbitMQ%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/"><i class="fa-solid fa-spinner fa-spin"></i></span></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">创建队列 12// 队列名称public static final String QUEUE_NAME = &quot;hello&quot;; 生产者 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950// 发消息    public static void main(String[] args) &#123;        // 创建一个连接工厂        ConnectionFactory factory = new ConnectionFactory();        // 工厂IP 连接RabbitMQ的队列        factory.setHost(&quot;47.95.214.111&quot;);        // 设置用户名        factory.setUsername(&quot;guest&quot;);        // 密码       ...</div></div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/liang.github.io/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/liang.github.io/">1</a><span class="page-number current">2</span><a class="page-number" href="/liang.github.io/page/3/#content-inner">3</a><a class="extend next" rel="next" href="/liang.github.io/page/3/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav><div class="recent-posts nc" id="recent-posts"></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/on_the_way/favicon.png" onerror="this.onerror=null;this.src='https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/on_the_way/404.png'" alt="avatar"/></div><div class="author-info-name">小梁</div><div class="author-info-description">幼稚的小孩儿</div><div class="site-data"><a href="/liang.github.io/archives/"><div class="headline">文章</div><div class="length-num">21</div></a><a href="/liang.github.io/tags/"><div class="headline">标签</div><div class="length-num">17</div></a><a href="/liang.github.io/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/liang.github.io/Markdown%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/" title="Markdown基础语法"><img src="https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/article/markdown.png" onerror="this.onerror=null;this.src='https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/on_the_way/404.png'" alt="Markdown基础语法"/></a><div class="content"><a class="title" href="/liang.github.io/Markdown%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/" title="Markdown基础语法">Markdown基础语法</a><time datetime="2025-05-08T01:36:38.000Z" title="发表于 2025-05-08 09:36:38">2025-05-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/liang.github.io/IDEA%20%E6%B0%B8%E4%B9%85%E6%BF%80%E6%B4%BB/" title="IDEA永久激活"><img src="https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/%E8%83%8C%E6%99%AF/idea.png" onerror="this.onerror=null;this.src='https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/on_the_way/404.png'" alt="IDEA永久激活"/></a><div class="content"><a class="title" href="/liang.github.io/IDEA%20%E6%B0%B8%E4%B9%85%E6%BF%80%E6%B4%BB/" title="IDEA永久激活">IDEA永久激活</a><time datetime="2023-05-08T01:36:38.000Z" title="发表于 2023-05-08 09:36:38">2023-05-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/liang.github.io/enum/" title="EnumUtil"><img src="https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/%E8%83%8C%E6%99%AF/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5/codeenum.jpg" onerror="this.onerror=null;this.src='https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/on_the_way/404.png'" alt="EnumUtil"/></a><div class="content"><a class="title" href="/liang.github.io/enum/" title="EnumUtil">EnumUtil</a><time datetime="2022-09-06T08:53:00.000Z" title="发表于 2022-09-06 16:53:00">2022-09-06</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/liang.github.io/word%E5%AF%BC%E5%87%BA/" title="word导出"><img src="https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/on_the_way/index_img.jpg" onerror="this.onerror=null;this.src='https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/on_the_way/404.png'" alt="word导出"/></a><div class="content"><a class="title" href="/liang.github.io/word%E5%AF%BC%E5%87%BA/" title="word导出">word导出</a><time datetime="2022-07-25T06:59:41.000Z" title="发表于 2022-07-25 14:59:41">2022-07-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/liang.github.io/Stream%E6%B5%81/" title="Stream流"><img src="https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/on_the_way/index_img.jpg" onerror="this.onerror=null;this.src='https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/on_the_way/404.png'" alt="Stream流"/></a><div class="content"><a class="title" href="/liang.github.io/Stream%E6%B5%81/" title="Stream流">Stream流</a><time datetime="2022-06-27T06:13:31.000Z" title="发表于 2022-06-27 14:13:31">2022-06-27</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            <a class="card-more-btn" href="/liang.github.io/categories/" title="查看更多">
+      <i class="fas fa-angle-right"></i></a>
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/liang.github.io/categories/IDEA/"><span class="card-category-list-name">IDEA</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/liang.github.io/categories/Java/"><span class="card-category-list-name">Java</span><span class="card-category-list-count">15</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/liang.github.io/categories/Java/Client/"><span class="card-category-list-name">Client</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/liang.github.io/categories/Java/RabbitMQ/"><span class="card-category-list-name">RabbitMQ</span><span class="card-category-list-count">4</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/liang.github.io/categories/Java/Spring/"><span class="card-category-list-name">Spring</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/liang.github.io/categories/Java/Stream/"><span class="card-category-list-name">Stream</span><span class="card-category-list-count">1</span></a></li></ul></li><li class="card-category-list-item "><a class="card-category-list-link" href="/liang.github.io/categories/hexo/"><span class="card-category-list-name">hexo</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/liang.github.io/categories/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/"><span class="card-category-list-name">对象存储</span><span class="card-category-list-count">1</span></a></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/liang.github.io/tags/Minio/" style="font-size: 1.1em; color: #999">Minio</a> <a href="/liang.github.io/tags/%E5%8F%8D%E5%B0%84/" style="font-size: 1.1em; color: #999">反射</a> <a href="/liang.github.io/tags/IO/" style="font-size: 1.1em; color: #999">IO</a> <a href="/liang.github.io/tags/%E4%BA%8B%E5%8A%A1%E4%BB%A3%E7%90%86/" style="font-size: 1.1em; color: #999">事务代理</a> <a href="/liang.github.io/tags/%E9%9B%86%E5%90%88/" style="font-size: 1.1em; color: #999">集合</a> <a href="/liang.github.io/tags/MQ/" style="font-size: 1.5em; color: #99a9bf">MQ</a> <a href="/liang.github.io/tags/JDK8/" style="font-size: 1.1em; color: #999">JDK8</a> <a href="/liang.github.io/tags/Mysql/" style="font-size: 1.1em; color: #999">Mysql</a> <a href="/liang.github.io/tags/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" style="font-size: 1.1em; color: #999">软件安装</a> <a href="/liang.github.io/tags/zip4j/" style="font-size: 1.1em; color: #999">zip4j</a> <a href="/liang.github.io/tags/%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/" style="font-size: 1.3em; color: #99a1ac">文件操作</a> <a href="/liang.github.io/tags/%E6%94%AF%E4%BB%98%E5%AE%9D/" style="font-size: 1.1em; color: #999">支付宝</a> <a href="/liang.github.io/tags/%E6%9E%9A%E4%B8%BE/" style="font-size: 1.1em; color: #999">枚举</a> <a href="/liang.github.io/tags/OKHttp/" style="font-size: 1.1em; color: #999">OKHttp</a> <a href="/liang.github.io/tags/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/" style="font-size: 1.1em; color: #999">问题记录</a> <a href="/liang.github.io/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" style="font-size: 1.1em; color: #999">博客搭建</a> <a href="/liang.github.io/tags/Markdown/" style="font-size: 1.1em; color: #999">Markdown</a></div></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">21</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-05-08T06:50:50.092Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="footer_custom_text"><div id="runtime"></div></div><p id="ghbdages"><a class="github-badge" target="_blank" href="https://hexo.io/" style="margin-inline:5px"><img src="https://img.shields.io/badge/Frame-Hexo-blue?style=flat&amp;logo=hexo" title="博客框架为Hexo_v7.3.0"/></a><a class="github-badge" target="_blank" href="https://butterfly.js.org/" style="margin-inline:5px"><img src="https://img.shields.io/badge/Theme-Butterfly-6513df?style=flat&amp;logo=bitdefender" title="主题版本Butterfly_v5.3.5"/></a><a class="github-badge" target="_blank" href="https://github.com/" style="margin-inline:5px"><img src="https://img.shields.io/badge/Source-Github-d021d6?style=flat&amp;logo=GitHub" title="本站项目由Github托管"/></a><a class="github-badge" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" style="margin-inline:5px"><img src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&amp;logo=Claris" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"/></a></p></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><!--a.icon-V.hidden(onclick='switchNightMode()',  title=_p('rightside.night_mode_title'))// svg(width='25', height='25', viewBox='0 0 1024 1024')
+  //  use#modeicon(xlink:href='#icon-moon')--><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/liang.github.io/js/utils.js"></script><script src="/liang.github.io/js/main.js"></script><div class="js-pjax"><script>(() => {
+  function loadValine () {
+    function initValine () {
+      let initData = {
+        el: '#vcomment',
+        appId: '0BO1TTxv7R3SRjokrnvOYLrU-gzGzoHsz',
+        appKey: 'PTYeulCJ4VvGrQ0X0XvsrNO7',
+        serverURLs: ''
+      }
+      
+      const valine = new Valine(initData)
+    }
+
+    if (typeof Valine === 'function') initValine() 
+    else btf.getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+  }
+
+  window.pjax ? loadValine() : window.addEventListener('load', loadValine)
+})()</script><script>window.typedJSFn = {
+  init: str => {
+    window.typed = new Typed('#subtitle', Object.assign({
+      strings: str,
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: true,
+      backSpeed: 50,
+    }, null))
+  },
+  run: subtitleType => {
+    if (true) {
+      if (typeof Typed === 'function') {
+        subtitleType()
+      } else {
+        btf.getScript('https://cdn.jsdelivr.net/npm/typed.js/dist/typed.umd.min.js').then(subtitleType)
+      }
+    } else {
+      subtitleType()
+    }
+  },
+  processSubtitle: (content, extraContents = []) => {
+    if (true) {
+      const sub = ["生命可以归结为一种简单的选择：要么忙于生存，要么赶着去死。","有些鸟注定是不会被关在笼子里的，因为它们的每一片羽毛上都闪耀着自由的光辉。","I guess it comes down to a simple choice:get busy living or get busy dying.","真正能困住一个人的，不是钢铁铸就的牢笼，而是心中矗立的高墙。"].slice()
+
+      if (extraContents.length > 0) {
+        sub.unshift(...extraContents)
+      }
+
+      if (typeof content === 'string') {
+        sub.unshift(content)
+      } else if (Array.isArray(content)) {
+        sub.unshift(...content)
+      }
+
+      sub.length > 0 && typedJSFn.init(sub)
+    } else {
+      document.getElementById('subtitle').textContent = typeof content === 'string' ? content :
+        (Array.isArray(content) && content.length > 0 ? content[0] : '')
+    }
+  }
+}
+btf.addGlobalFn('pjaxSendOnce', () => { typed.destroy() }, 'typedDestroy')
+</script><script>function subtitleType () {
+  typedJSFn.processSubtitle(["生命可以归结为一种简单的选择：要么忙于生存，要么赶着去死。","有些鸟注定是不会被关在笼子里的，因为它们的每一片羽毛上都闪耀着自由的光辉。","I guess it comes down to a simple choice:get busy living or get busy dying.","真正能困住一个人的，不是钢铁铸就的牢笼，而是心中矗立的高墙。"])
+}
+typedJSFn.run(subtitleType)</script></div><script src="/liang.github.io/js/easy-Danmaku.js"></script><script src="/liang.github.io/js/easy.js"></script><canvas id="universe"></canvas><script src="/liang.github.io/js/universe.js"></script><script src="/liang.github.io/js/footer_custom.js"></script><script src="/liang.github.io/js/custom/MemorialDayMode.js"></script><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-heart.min.js" async="async" mobile="true"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

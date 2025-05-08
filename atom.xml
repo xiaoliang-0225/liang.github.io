@@ -6,7 +6,7 @@
   <link href="https://xiaoliang-0225.github.io/liang.github.io/atom.xml" rel="self"/>
   
   <link href="https://xiaoliang-0225.github.io/liang.github.io/"/>
-  <updated>2025-05-07T09:00:30.689Z</updated>
+  <updated>2025-05-08T06:48:31.283Z</updated>
   <id>https://xiaoliang-0225.github.io/liang.github.io/</id>
   
   <author>
@@ -17,25 +17,485 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hello World</title>
-    <link href="https://xiaoliang-0225.github.io/liang.github.io/2025/04/16/hello-world/"/>
-    <id>https://xiaoliang-0225.github.io/liang.github.io/2025/04/16/hello-world/</id>
-    <published>2025-04-16T08:06:22.840Z</published>
-    <updated>2025-05-07T09:00:30.689Z</updated>
+    <title>Markdown基础语法</title>
+    <link href="https://xiaoliang-0225.github.io/liang.github.io/Markdown%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/"/>
+    <id>https://xiaoliang-0225.github.io/liang.github.io/Markdown%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/</id>
+    <published>2025-05-08T01:36:38.000Z</published>
+    <updated>2025-05-08T06:48:31.283Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
+    <summary type="html">&lt;div class=&quot;note flat&quot;&gt;&lt;p&gt;Markdown 是一种轻量级标记语言，允许人们使用易读易写的纯文本格式编写文档，然后转换成有效的HTML文档。&lt;br&gt;
+Markdown 编写的文档可以导出 HTML 、Word、图像、PDF、Epub</summary>
         
       
     
     
     
-    <category term="测试" scheme="https://xiaoliang-0225.github.io/liang.github.io/categories/%E6%B5%8B%E8%AF%95/"/>
+    <category term="教程" scheme="https://xiaoliang-0225.github.io/liang.github.io/categories/%E6%95%99%E7%A8%8B/"/>
     
+    
+    <category term="Markdown" scheme="https://xiaoliang-0225.github.io/liang.github.io/tags/Markdown/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>IDEA永久激活</title>
+    <link href="https://xiaoliang-0225.github.io/liang.github.io/IDEA%20%E6%B0%B8%E4%B9%85%E6%BF%80%E6%B4%BB/"/>
+    <id>https://xiaoliang-0225.github.io/liang.github.io/IDEA%20%E6%B0%B8%E4%B9%85%E6%BF%80%E6%B4%BB/</id>
+    <published>2023-05-08T01:36:38.000Z</published>
+    <updated>2025-05-08T06:48:31.301Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;IDEA-永久激活&quot;&gt;IDEA 永久激活&lt;/h2&gt;
+&lt;h3 id=&quot;IDEA-下载及更新安装&quot;&gt;IDEA 下载及更新安装&lt;/h3&gt;
+&lt;p&gt;官方下载地址：&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="IDEA" scheme="https://xiaoliang-0225.github.io/liang.github.io/categories/IDEA/"/>
+    
+    
+    <category term="软件安装" scheme="https://xiaoliang-0225.github.io/liang.github.io/tags/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>EnumUtil</title>
+    <link href="https://xiaoliang-0225.github.io/liang.github.io/enum/"/>
+    <id>https://xiaoliang-0225.github.io/liang.github.io/enum/</id>
+    <published>2022-09-06T08:53:00.000Z</published>
+    <updated>2025-05-08T06:22:00.510Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;枚举工具类&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Java" scheme="https://xiaoliang-0225.github.io/liang.github.io/categories/Java/"/>
+    
+    
+    <category term="枚举" scheme="https://xiaoliang-0225.github.io/liang.github.io/tags/%E6%9E%9A%E4%B8%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>word导出</title>
+    <link href="https://xiaoliang-0225.github.io/liang.github.io/word%E5%AF%BC%E5%87%BA/"/>
+    <id>https://xiaoliang-0225.github.io/liang.github.io/word%E5%AF%BC%E5%87%BA/</id>
+    <published>2022-07-25T06:59:41.000Z</published>
+    <updated>2025-05-08T06:48:31.274Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;最近接到一个新的需求，要把所有数据在一个模板内全部展示，而且是要支持分页的&lt;br&gt;
+在这之前所做的都是一个模板之展示一页，怎么做呢？？？&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Java" scheme="https://xiaoliang-0225.github.io/liang.github.io/categories/Java/"/>
+    
+    
+    <category term="文件操作" scheme="https://xiaoliang-0225.github.io/liang.github.io/tags/%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Stream流</title>
+    <link href="https://xiaoliang-0225.github.io/liang.github.io/Stream%E6%B5%81/"/>
+    <id>https://xiaoliang-0225.github.io/liang.github.io/Stream%E6%B5%81/</id>
+    <published>2022-06-27T06:13:31.000Z</published>
+    <updated>2025-05-08T06:48:31.264Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;Stream 是 Java8 中处理集合的关键抽象概念，它可以指定你希望对集合进行的操作，可以执行非常复杂的查找、过滤和映射数据等操作。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Java" scheme="https://xiaoliang-0225.github.io/liang.github.io/categories/Java/"/>
+    
+    <category term="Stream" scheme="https://xiaoliang-0225.github.io/liang.github.io/categories/Java/Stream/"/>
+    
+    
+    <category term="JDK8" scheme="https://xiaoliang-0225.github.io/liang.github.io/tags/JDK8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>集合操作</title>
+    <link href="https://xiaoliang-0225.github.io/liang.github.io/%E9%9B%86%E5%90%88%E6%93%8D%E4%BD%9C/"/>
+    <id>https://xiaoliang-0225.github.io/liang.github.io/%E9%9B%86%E5%90%88%E6%93%8D%E4%BD%9C/</id>
+    <published>2022-06-27T06:00:50.000Z</published>
+    <updated>2025-05-08T06:48:31.287Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;Map&amp;lt;Object, String&amp;gt;&lt;br&gt;
+List&amp;lt;Map&amp;lt;Integer, Object&amp;gt;&amp;gt;&lt;br&gt;
+List&amp;lt;Map&amp;lt;String, Object&amp;gt;&amp;gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Java" scheme="https://xiaoliang-0225.github.io/liang.github.io/categories/Java/"/>
+    
+    
+    <category term="集合" scheme="https://xiaoliang-0225.github.io/liang.github.io/tags/%E9%9B%86%E5%90%88/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Transactional事务</title>
+    <link href="https://xiaoliang-0225.github.io/liang.github.io/%E4%BA%8B%E5%8A%A1/"/>
+    <id>https://xiaoliang-0225.github.io/liang.github.io/%E4%BA%8B%E5%8A%A1/</id>
+    <published>2022-06-27T03:25:27.000Z</published>
+    <updated>2025-05-08T06:48:31.272Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;Spring事务&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Java" scheme="https://xiaoliang-0225.github.io/liang.github.io/categories/Java/"/>
+    
+    <category term="Spring" scheme="https://xiaoliang-0225.github.io/liang.github.io/categories/Java/Spring/"/>
+    
+    
+    <category term="事务代理" scheme="https://xiaoliang-0225.github.io/liang.github.io/tags/%E4%BA%8B%E5%8A%A1%E4%BB%A3%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>反射获取对象字段类型</title>
+    <link href="https://xiaoliang-0225.github.io/liang.github.io/%E5%8F%8D%E5%B0%84%E8%8E%B7%E5%8F%96%E5%AF%B9%E8%B1%A1%E5%AD%97%E6%AE%B5%E7%B1%BB%E5%9E%8B/"/>
+    <id>https://xiaoliang-0225.github.io/liang.github.io/%E5%8F%8D%E5%B0%84%E8%8E%B7%E5%8F%96%E5%AF%B9%E8%B1%A1%E5%AD%97%E6%AE%B5%E7%B1%BB%E5%9E%8B/</id>
+    <published>2022-06-21T06:29:35.000Z</published>
+    <updated>2025-05-08T06:48:31.277Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;Java反射的使用&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Java" scheme="https://xiaoliang-0225.github.io/liang.github.io/categories/Java/"/>
+    
+    
+    <category term="反射" scheme="https://xiaoliang-0225.github.io/liang.github.io/tags/%E5%8F%8D%E5%B0%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>jar包程序在Linux环境中读取静态资源</title>
+    <link href="https://xiaoliang-0225.github.io/liang.github.io/jar%E5%8C%85%E7%A8%8B%E5%BA%8F%E5%9C%A8Linux%E7%8E%AF%E5%A2%83%E4%B8%AD%E8%AF%BB%E5%8F%96%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90/"/>
+    <id>https://xiaoliang-0225.github.io/liang.github.io/jar%E5%8C%85%E7%A8%8B%E5%BA%8F%E5%9C%A8Linux%E7%8E%AF%E5%A2%83%E4%B8%AD%E8%AF%BB%E5%8F%96%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90/</id>
+    <published>2022-06-17T06:13:17.000Z</published>
+    <updated>2025-05-08T06:48:31.250Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;strong&gt;问题描述&lt;/strong&gt;&lt;br&gt;
+将xlsx文件放到了resource目录下，在本地是可以读取到的，打成jar包之后访问不到&lt;br&gt;
+&lt;img src=&quot;https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/jar.png&quot; alt=&quot;错误信息&quot; title=&quot;梁百川&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Java" scheme="https://xiaoliang-0225.github.io/liang.github.io/categories/Java/"/>
+    
+    
+    <category term="问题记录" scheme="https://xiaoliang-0225.github.io/liang.github.io/tags/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Excel操作</title>
+    <link href="https://xiaoliang-0225.github.io/liang.github.io/Excel%E6%93%8D%E4%BD%9C/"/>
+    <id>https://xiaoliang-0225.github.io/liang.github.io/Excel%E6%93%8D%E4%BD%9C/</id>
+    <published>2022-06-17T06:06:12.000Z</published>
+    <updated>2025-05-08T06:22:00.519Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;span id=&quot;more&quot;&gt;&lt;/span&gt;
+&lt;ul&gt;
+&lt;li&gt;官网：&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="Java" scheme="https://xiaoliang-0225.github.io/liang.github.io/categories/Java/"/>
+    
+    
+    <category term="文件操作" scheme="https://xiaoliang-0225.github.io/liang.github.io/tags/%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>File文件转换</title>
+    <link href="https://xiaoliang-0225.github.io/liang.github.io/File%E6%96%87%E4%BB%B6%E8%BD%AC%E6%8D%A2/"/>
+    <id>https://xiaoliang-0225.github.io/liang.github.io/File%E6%96%87%E4%BB%B6%E8%BD%AC%E6%8D%A2/</id>
+    <published>2022-06-17T05:59:25.000Z</published>
+    <updated>2025-05-08T06:48:31.289Z</updated>
+    
+    
+    <summary type="html">&lt;ul&gt;
+&lt;li&gt;MultipartFile转File&lt;/li&gt;
+&lt;li&gt;File转MultipartFile&lt;/li&gt;
+&lt;li&gt;InputSteam转File&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    <category term="Java" scheme="https://xiaoliang-0225.github.io/liang.github.io/categories/Java/"/>
+    
+    
+    <category term="IO" scheme="https://xiaoliang-0225.github.io/liang.github.io/tags/IO/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Minio</title>
+    <link href="https://xiaoliang-0225.github.io/liang.github.io/minio/"/>
+    <id>https://xiaoliang-0225.github.io/liang.github.io/minio/</id>
+    <published>2022-06-17T05:47:00.000Z</published>
+    <updated>2025-05-08T06:48:31.259Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;minio为开源的高可用分部署对象存储服务组件，已经提供了分布式部署的解决方案，实现高可靠、高可用的资源存储，MinIO以极简主义为指导进行设计，追求极致的维护精简性和卓越的读写性能表现&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="对象存储" scheme="https://xiaoliang-0225.github.io/liang.github.io/categories/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/"/>
+    
+    
+    <category term="Minio" scheme="https://xiaoliang-0225.github.io/liang.github.io/tags/Minio/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>压缩包解压zip&amp;rar</title>
+    <link href="https://xiaoliang-0225.github.io/liang.github.io/%E5%8E%8B%E7%BC%A9%E5%8C%85%E8%A7%A3%E5%8E%8Bzip-rar/"/>
+    <id>https://xiaoliang-0225.github.io/liang.github.io/%E5%8E%8B%E7%BC%A9%E5%8C%85%E8%A7%A3%E5%8E%8Bzip-rar/</id>
+    <published>2022-06-17T03:28:12.000Z</published>
+    <updated>2025-05-08T06:48:31.246Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;span id=&quot;more&quot;&gt;&lt;/span&gt;
+&lt;h2 id=&quot;zip&quot;&gt;zip&lt;/h2&gt;
+&lt;h3 id=&quot;依赖&quot;&gt;依赖&lt;/h3&gt;
+&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td</summary>
+        
+      
+    
+    
+    
+    <category term="Java" scheme="https://xiaoliang-0225.github.io/liang.github.io/categories/Java/"/>
+    
+    
+    <category term="zip4j" scheme="https://xiaoliang-0225.github.io/liang.github.io/tags/zip4j/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>OkHttpClient</title>
+    <link href="https://xiaoliang-0225.github.io/liang.github.io/OkHttpClient/"/>
+    <id>https://xiaoliang-0225.github.io/liang.github.io/OkHttpClient/</id>
+    <published>2022-05-12T01:27:10.000Z</published>
+    <updated>2025-05-08T06:48:31.267Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;strong&gt;OkHttpClient&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;OkHttpClient是一个高效的HTTP客户端&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;支持HTTP/2，允许所有同一个主机地址的请求共享同一个 &lt;code&gt;socket&lt;/code&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="Java" scheme="https://xiaoliang-0225.github.io/liang.github.io/categories/Java/"/>
+    
+    <category term="Client" scheme="https://xiaoliang-0225.github.io/liang.github.io/categories/Java/Client/"/>
+    
+    
+    <category term="OKHttp" scheme="https://xiaoliang-0225.github.io/liang.github.io/tags/OKHttp/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MySQL索引</title>
+    <link href="https://xiaoliang-0225.github.io/liang.github.io/Mysql%E7%B4%A2%E5%BC%95/"/>
+    <id>https://xiaoliang-0225.github.io/liang.github.io/Mysql%E7%B4%A2%E5%BC%95/</id>
+    <published>2022-05-08T01:36:38.000Z</published>
+    <updated>2025-05-08T06:48:31.292Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;span id=&quot;more&quot;&gt;&lt;/span&gt;
+&lt;h1&gt;索引&lt;/h1&gt;
+&lt;h2 id=&quot;MYSQL的索引类型&quot;&gt;MYSQL的索引类型&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;普通索引 INDEX&lt;/li&gt;
+&lt;li&gt;唯一索引</summary>
+        
+      
+    
+    
+    
+    <category term="数据库" scheme="https://xiaoliang-0225.github.io/liang.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+    <category term="Mysql" scheme="https://xiaoliang-0225.github.io/liang.github.io/tags/Mysql/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>RabbitMQ集群搭建</title>
+    <link href="https://xiaoliang-0225.github.io/liang.github.io/RabbitMQ%E9%9B%86%E7%BE%A4%E6%90%AD%E5%BB%BA/"/>
+    <id>https://xiaoliang-0225.github.io/liang.github.io/RabbitMQ%E9%9B%86%E7%BE%A4%E6%90%AD%E5%BB%BA/</id>
+    <published>2022-03-26T03:36:56.000Z</published>
+    <updated>2025-05-08T06:48:31.295Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;LINUX-搭建集群&quot;&gt;LINUX 搭建集群&lt;/h2&gt;
+&lt;p&gt;修改每台机器的主机名称&lt;/p&gt;
+&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span</summary>
+        
+      
+    
+    
+    
+    <category term="Java" scheme="https://xiaoliang-0225.github.io/liang.github.io/categories/Java/"/>
+    
+    <category term="RabbitMQ" scheme="https://xiaoliang-0225.github.io/liang.github.io/categories/Java/RabbitMQ/"/>
+    
+    
+    <category term="MQ" scheme="https://xiaoliang-0225.github.io/liang.github.io/tags/MQ/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>支付宝支付接口</title>
+    <link href="https://xiaoliang-0225.github.io/liang.github.io/%E6%94%AF%E4%BB%98%E5%AE%9D%E6%94%AF%E4%BB%98%E6%8E%A5%E5%8F%A3/"/>
+    <id>https://xiaoliang-0225.github.io/liang.github.io/%E6%94%AF%E4%BB%98%E5%AE%9D%E6%94%AF%E4%BB%98%E6%8E%A5%E5%8F%A3/</id>
+    <published>2022-03-11T03:44:49.000Z</published>
+    <updated>2025-05-08T06:48:31.262Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;strong&gt;官网：&lt;/strong&gt; &lt;a href=&quot;https://open.alipay.com/&quot;&gt;网页&amp;amp;移动应用&lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="第三方支付" scheme="https://xiaoliang-0225.github.io/liang.github.io/categories/%E7%AC%AC%E4%B8%89%E6%96%B9%E6%94%AF%E4%BB%98/"/>
+    
+    
+    <category term="支付宝" scheme="https://xiaoliang-0225.github.io/liang.github.io/tags/%E6%94%AF%E4%BB%98%E5%AE%9D/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>RabbitMQ 如何保证消息的可靠传输</title>
+    <link href="https://xiaoliang-0225.github.io/liang.github.io/RabbitMQ%20%E5%A6%82%E4%BD%95%E4%BF%9D%E8%AF%81%E6%B6%88%E6%81%AF%E7%9A%84%E5%8F%AF%E9%9D%A0%E4%BC%A0%E8%BE%93/"/>
+    <id>https://xiaoliang-0225.github.io/liang.github.io/RabbitMQ%20%E5%A6%82%E4%BD%95%E4%BF%9D%E8%AF%81%E6%B6%88%E6%81%AF%E7%9A%84%E5%8F%AF%E9%9D%A0%E4%BC%A0%E8%BE%93/</id>
+    <published>2020-07-10T16:00:00.000Z</published>
+    <updated>2025-05-08T06:48:31.304Z</updated>
+    
+    
+    <summary type="html">&lt;h4 id=&quot;可靠传输&quot;&gt;可靠传输&lt;/h4&gt;
+&lt;p&gt;在RabbitMQ中，一个消息从产生到被消费大致会经过三个步骤，生产者生产消息，消息投递到RabbitMQ，RabbitMQ再将消息推送到消费者（或消费者拉取），最终消费者将这条消息成功消费。消息的可靠传输，就是确保消息能够百分百从生产者发送到服务器，在从服务器发送到消费者。&lt;/p&gt;
+&lt;p&gt;所以消息丢失也可以划分为三种情况——生产者、消息队列、消费者。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Java" scheme="https://xiaoliang-0225.github.io/liang.github.io/categories/Java/"/>
+    
+    <category term="RabbitMQ" scheme="https://xiaoliang-0225.github.io/liang.github.io/categories/Java/RabbitMQ/"/>
+    
+    
+    <category term="MQ" scheme="https://xiaoliang-0225.github.io/liang.github.io/tags/MQ/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>RabbitMQ发布确认</title>
+    <link href="https://xiaoliang-0225.github.io/liang.github.io/RabbitMQ%E5%8F%91%E5%B8%83%E7%A1%AE%E8%AE%A4/"/>
+    <id>https://xiaoliang-0225.github.io/liang.github.io/RabbitMQ%E5%8F%91%E5%B8%83%E7%A1%AE%E8%AE%A4/</id>
+    <published>2020-03-22T08:42:27.000Z</published>
+    <updated>2025-05-08T06:48:31.298Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;消息确认机制-Confirm模式&quot;&gt;消息确认机制(Confirm模式)&lt;/h2&gt;
+&lt;h3 id=&quot;前提条件&quot;&gt;前提条件&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;通过信道将生产者设置队列持久化&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure</summary>
+        
+      
+    
+    
+    
+    <category term="Java" scheme="https://xiaoliang-0225.github.io/liang.github.io/categories/Java/"/>
+    
+    <category term="RabbitMQ" scheme="https://xiaoliang-0225.github.io/liang.github.io/categories/Java/RabbitMQ/"/>
+    
+    
+    <category term="MQ" scheme="https://xiaoliang-0225.github.io/liang.github.io/tags/MQ/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>RabbitMQ的基本使用</title>
+    <link href="https://xiaoliang-0225.github.io/liang.github.io/RabbitMQ%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/"/>
+    <id>https://xiaoliang-0225.github.io/liang.github.io/RabbitMQ%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</id>
+    <published>2020-03-20T08:59:09.000Z</published>
+    <updated>2025-05-08T06:48:31.280Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;创建队列&quot;&gt;创建队列&lt;/h2&gt;
+&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span</summary>
+        
+      
+    
+    
+    
+    <category term="Java" scheme="https://xiaoliang-0225.github.io/liang.github.io/categories/Java/"/>
+    
+    <category term="RabbitMQ" scheme="https://xiaoliang-0225.github.io/liang.github.io/categories/Java/RabbitMQ/"/>
+    
+    
+    <category term="MQ" scheme="https://xiaoliang-0225.github.io/liang.github.io/tags/MQ/"/>
     
   </entry>
   

@@ -1,0 +1,466 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Markdown基础语法 | 小梁的空间</title><meta name="author" content="小梁"><meta name="copyright" content="小梁"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Markdown 是一种轻量级标记语言，允许人们使用易读易写的纯文本格式编写文档，然后转换成有效的HTML文档。 Markdown 编写的文档可以导出 HTML 、Word、图像、PDF、Epub 等多种格式的文档。 Markdown 编写的文档后缀为 .md, .markdown。  标题 使用#号标记，可以表示1-6级标题， 随#的个数递增，一级标题字号最大，六级标题字号最小。 代码如下： 1">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Markdown基础语法">
+<meta property="og:url" content="https://xiaoliang-0225.github.io/liang.github.io/Markdown%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/index.html">
+<meta property="og:site_name" content="小梁的空间">
+<meta property="og:description" content="Markdown 是一种轻量级标记语言，允许人们使用易读易写的纯文本格式编写文档，然后转换成有效的HTML文档。 Markdown 编写的文档可以导出 HTML 、Word、图像、PDF、Epub 等多种格式的文档。 Markdown 编写的文档后缀为 .md, .markdown。  标题 使用#号标记，可以表示1-6级标题， 随#的个数递增，一级标题字号最大，六级标题字号最小。 代码如下： 1">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/article/markdown.png">
+<meta property="article:published_time" content="2025-05-08T01:36:38.000Z">
+<meta property="article:modified_time" content="2025-05-08T06:48:31.283Z">
+<meta property="article:author" content="小梁">
+<meta property="article:tag" content="Markdown">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/article/markdown.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Markdown基础语法",
+  "url": "https://xiaoliang-0225.github.io/liang.github.io/Markdown%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/",
+  "image": "https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/article/markdown.png",
+  "datePublished": "2025-05-08T01:36:38.000Z",
+  "dateModified": "2025-05-08T06:48:31.283Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "小梁",
+      "url": "https://xiaoliang-0225.github.io/liang.github.io/"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/liang.github.io/img/favicon.png"><link rel="canonical" href="https://xiaoliang-0225.github.io/liang.github.io/Markdown%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/liang.github.io/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/liang.github.io/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Markdown基础语法',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/liang.github.io/css/custom/twikoo_beautify.css"  media="defer" onload="this.media='all'"><link rel="stylesheet" href="/liang.github.io/css/waves.css"><link rel="stylesheet" href="/liang.github.io/css/universe.css"><link rel="stylesheet" href="/liang.github.io/css/footer_custom.css"><link rel="stylesheet" href="/liang.github.io/css/custom.css"><!-- include ./custom/sun_moon.pug--><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/liang.github.io/atom.xml" title="小梁的空间" type="application/atom+xml">
+<link rel="alternate" href="/liang.github.io/rss2.xml" title="小梁的空间" type="application/rss+xml">
+</head><body><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><!-- img.loading-img(class='nolazyload' src= (loading_img ? url_for(loading_img) : "/source/img/head_portrait.jpg") ) //- 替换为你的头像地址，或者在自定义引入的custom.css进行覆盖。--><img class="loading-img nolazyload" src="/liang.github.io/img/head_portrait.jpg"/><div class="loading-image-dot"></div><div id="loading-percentage">0%</div></div></div><script async="async">const loadingPercentage = document.getElementById("loading-percentage");
+loadingPercentage.style.color = "black";
+let loadingPercentageTimer = setInterval(function() {
+    var progressBar = document.querySelector(".pace-progress");
+    if (!progressBar) return
+    var currentValue = progressBar.getAttribute("data-progress-text");
+    if (currentValue !== loadingPercentage.textContent) {
+        loadingPercentage.textContent = currentValue;
+        if (currentValue === "100%") {
+            clearInterval(loadingPercentageTimer);
+        }
+    }
+}, 100);
+const preloader = {
+    endLoading: () => {
+        document.body.style.overflow = 'auto';
+        document.getElementById('loading-box').classList.add("loaded")
+    },
+    initLoading: () => {
+        document.body.style.overflow = '';
+        document.getElementById('loading-box').classList.remove("loaded")
+    }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();}, 6000)
+document.getElementById('loading-box').addEventListener('click',()=> {preloader.endLoading()})
+if (false) {
+    document.addEventListener('pjax:send', () => { preloader.initLoading() })
+    document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/on_the_way/favicon.png" onerror="this.onerror=null;this.src='https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/on_the_way/404.png'" alt="avatar"/></div><div class="site-data text-center"><a href="/liang.github.io/archives/"><div class="headline">文章</div><div class="length-num">21</div></a><a href="/liang.github.io/tags/"><div class="headline">标签</div><div class="length-num">17</div></a><a href="/liang.github.io/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/liang.github.io/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/liang.github.io/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/liang.github.io/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/liang.github.io/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/liang.github.io/gallery/"><i class="fa-fw fa fa-camera-retro"></i><span> 相册</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/liang.github.io/links/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/liang.github.io/comment/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/liang.github.io/atom.xml"><i class="fa-fw fas fa-rss"></i><span> RSS订阅</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/article/markdown.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/liang.github.io/"><img class="site-icon" src="/liang.github.io/img/20151215110435616.gif" alt="Logo"><span class="site-name">小梁的空间</span></a><a class="nav-page-title" href="/liang.github.io/"><span class="site-name">Markdown基础语法</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/liang.github.io/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/liang.github.io/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/liang.github.io/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/liang.github.io/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/liang.github.io/gallery/"><i class="fa-fw fa fa-camera-retro"></i><span> 相册</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/liang.github.io/links/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/liang.github.io/comment/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/liang.github.io/atom.xml"><i class="fa-fw fas fa-rss"></i><span> RSS订阅</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">Markdown基础语法</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-05-08T01:36:38.000Z" title="发表于 2025-05-08 09:36:38">2025-05-08</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-05-08T06:48:31.283Z" title="更新于 2025-05-08 14:48:31">2025-05-08</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/liang.github.io/categories/%E6%95%99%E7%A8%8B/">教程</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><div class="note flat"><p>Markdown 是一种轻量级标记语言，允许人们使用易读易写的纯文本格式编写文档，然后转换成有效的HTML文档。<br>
+Markdown 编写的文档可以导出 HTML 、Word、图像、PDF、Epub 等多种格式的文档。<br>
+Markdown 编写的文档后缀为 .md, .markdown。</p>
+</div>
+<h2 id="标题">标题</h2>
+<p>使用#号标记，可以表示1-6级标题， 随#的个数递增，一级标题字号最大，六级标题字号最小。<br>
+代码如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 标题一</span><br><span class="line">## 标题二</span><br><span class="line">### 标题三</span><br><span class="line">#### 标题四</span><br><span class="line">##### 标题五</span><br><span class="line">###### 标题六</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>💡  <strong>提示：</strong> 不同的 Markdown 应用程序处理 # 和标题之间的空格方式并不一致。为了兼容考虑，请用一个空格在 # 和标题之间进行分隔。</p>
+</blockquote>
+<h2 id="段落">段落</h2>
+<p>要创建段落，请使用空白行将一行或多行文本进行分隔。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Markdown语法</th>
+<th style="text-align:center">预览效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>I really like using Markdown.</code></td>
+<td style="text-align:center"><p>I really like using Markdown.</p></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>💡  <strong>提示：</strong>  不要用空格（spaces）或制表符（ tabs）缩进段落。</p>
+</blockquote>
+<h2 id="换行">换行</h2>
+<p>在一行的末尾添加两个或多个空格，然后按回车键,即可创建一个换行(<code>&lt;br&gt;</code>)。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Markdown语法</th>
+<th style="text-align:center">预览效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>This is the first line.</code> <br>  <code>And this is the second line.</code></td>
+<td style="text-align:center"><p>This is the first line. <br> And this is the second line.</p></td>
+</tr>
+</tbody>
+</table>
+<h2 id="字体">字体</h2>
+<p>设置文本为粗体或斜体。<br>
+粗体：前后各添加两个星号或下划线<br>
+斜体：前后添加一个星号或下划线</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Markdown语法</th>
+<th style="text-align:center">预览效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>*斜体*</code></td>
+<td style="text-align:center"><i>斜体</i></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>_斜体_</code></td>
+<td style="text-align:center"><i>斜体</i></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>**粗体**</code></td>
+<td style="text-align:center"><b>粗体</b></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>__粗体__</code></td>
+<td style="text-align:center"><b>粗体</b></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>***粗斜体__</code></td>
+<td style="text-align:center"><b><i>粗斜体</i></b></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>___粗斜体___</code></td>
+<td style="text-align:center"><b><i>粗斜体</i></b></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>💡  <strong>提示：</strong>  Markdown 应用程序在处理单词或短语中间添加的下划线上并不一致。为了实现兼容性，请使用星号将单词或短语的中间部分加粗并以斜体显示.</p>
+</blockquote>
+<h2 id="引用">引用</h2>
+<p>要创建块引用，请在段落前添加一个 <code>&gt;</code> 符号。</p>
+<h3 id="语法">语法</h3>
+<p><code>&gt; 块引用</code><br>
+效果如下：</p>
+<blockquote>
+<p>块引用</p>
+</blockquote>
+<h3 id="多个段落的块引用">多个段落的块引用</h3>
+<p>可以包含多个段落。为段落之间的空白行添加一个 <code>&gt;</code> 符号。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; 段落1</span><br><span class="line">&gt; </span><br><span class="line">&gt; 段落2</span><br></pre></td></tr></table></figure>
+<p>效果如下：</p>
+<blockquote>
+<p>段落1</p>
+<p>段落2</p>
+</blockquote>
+<h3 id="嵌套块引用">嵌套块引用</h3>
+<p>块引用可以嵌套。在要嵌套的段落前添加一个 <code>&gt;&gt;</code> 符号。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; 块引用1</span><br><span class="line">&gt;</span><br><span class="line">&gt;&gt; 块引用2</span><br></pre></td></tr></table></figure>
+<p>效果如下：</p>
+<blockquote>
+<p>块引用1</p>
+<blockquote>
+<p>块引用2</p>
+</blockquote>
+</blockquote>
+<h3 id="带有其他元素的块引用">带有其他元素的块引用</h3>
+<p>块引用可以包含其他 Markdown 格式的元素。并非所有元素都可以使用，你需要进行实验以查看哪些元素有效。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt; ### 标题</span><br><span class="line">&gt;</span><br><span class="line">&gt; - 列表</span><br><span class="line">&gt; - 列表</span><br><span class="line">&gt;</span><br><span class="line">&gt; *斜体* **加粗**</span><br></pre></td></tr></table></figure>
+<p>效果如下：</p>
+<blockquote>
+<h3 id="标题-v2">标题</h3>
+<ul>
+<li>列表</li>
+<li>列表</li>
+</ul>
+<p><em>斜体</em> <strong>加粗</strong></p>
+</blockquote>
+<h2 id="列表">列表</h2>
+<p>可以将多个条目组织成有序或无序列表。</p>
+<h3 id="有序列表">有序列表</h3>
+<p>要创建有序列表，请在每个列表项前添加数字并紧跟一个英文句点。数字不必按数学顺序排列，但是列表应当以数字 1 起始。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">一、</span><br><span class="line">1. 一</span><br><span class="line">2. 二</span><br><span class="line">3. 三</span><br><span class="line">二、</span><br><span class="line">1. 一</span><br><span class="line">1. 二</span><br><span class="line">1. 三</span><br><span class="line">三、</span><br><span class="line">1. 一</span><br><span class="line">5. 二</span><br><span class="line">3. 三</span><br><span class="line">四、</span><br><span class="line">1. 一</span><br><span class="line">2. 二</span><br><span class="line">    1. 二杠一</span><br><span class="line">3. 三</span><br></pre></td></tr></table></figure>
+<p>效果如下：<br>
+一、</p>
+<ol>
+<li>一</li>
+<li>二</li>
+<li>三</li>
+</ol>
+<p>二、</p>
+<ol>
+<li>一</li>
+<li>二</li>
+<li>三</li>
+</ol>
+<p>三、</p>
+<ol>
+<li>一</li>
+<li>二</li>
+<li>三</li>
+</ol>
+<p>四、</p>
+<ol>
+<li>一</li>
+<li>二
+<ol>
+<li>二杠一</li>
+</ol>
+</li>
+<li>三</li>
+</ol>
+<h3 id="无序列表">无序列表</h3>
+<p>要创建无序列表，请在每个列表项前面添加破折号 (-)、星号 (*) 或加号 (+) 。缩进一个或多个列表项可创建嵌套列表</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">一、</span><br><span class="line">- First item</span><br><span class="line">- Second item</span><br><span class="line">- Third item</span><br><span class="line">- Fourth item</span><br><span class="line"></span><br><span class="line">二、</span><br><span class="line">* First item</span><br><span class="line">* Second item</span><br><span class="line">* Third item</span><br><span class="line">* Fourth item</span><br><span class="line"></span><br><span class="line">三、</span><br><span class="line">+ First item</span><br><span class="line">+ Second item</span><br><span class="line">+ Third item</span><br><span class="line">+ Fourth item</span><br><span class="line"></span><br><span class="line">四、</span><br><span class="line">- First item</span><br><span class="line">- Second item</span><br><span class="line">- Third item</span><br><span class="line">    - Indented item</span><br><span class="line">    - Indented item</span><br><span class="line">- Fourth item</span><br></pre></td></tr></table></figure>
+<p>效果如下：<br>
+一、</p>
+<ul>
+<li>First item</li>
+<li>Second item</li>
+<li>Third item</li>
+<li>Fourth item</li>
+</ul>
+<p>二、</p>
+<ul>
+<li>First item</li>
+<li>Second item</li>
+<li>Third item</li>
+<li>Fourth item</li>
+</ul>
+<p>三、</p>
+<ul>
+<li>First item</li>
+<li>Second item</li>
+<li>Third item</li>
+<li>Fourth item</li>
+</ul>
+<p>四、</p>
+<ul>
+<li>First item</li>
+<li>Second item</li>
+<li>Third item
+<ul>
+<li>Indented item</li>
+<li>Indented item</li>
+</ul>
+</li>
+<li>Fourth item</li>
+</ul>
+<h2 id="链接">链接</h2>
+<p>链接文本放在中括号内，链接地址放在后面的括号中，链接title可选。<br>
+超链接Markdown语法代码：<code>[超链接显示名](超链接地址 &quot;超链接title&quot;)</code><br>
+对应的HTML代码：<code>&lt;a href=&quot;超链接地址&quot; title=&quot;超链接title&quot;&gt;超链接显示名&lt;/a&gt;</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">这是一个链接 [小梁的空间](https://xiaoliang-0225.github.io/liang.github.io/)。</span><br></pre></td></tr></table></figure>
+<p>效果如下：<br>
+这是一个链接 <a href="https://xiaoliang-0225.github.io/liang.github.io/">小梁的空间</a>。</p>
+<h3 id="给链接增加-Title">给链接增加 Title</h3>
+<p>链接title是当鼠标悬停在链接上时会出现的文字，这个title是可选的，它放在圆括号中链接地址后面，跟链接地址之间以空格分隔。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">这是一个链接 [小梁的空间](https://xiaoliang-0225.github.io/liang.github.io/ &quot;小梁的空间&quot;)。</span><br></pre></td></tr></table></figure>
+<p>效果如下：</p>
+<p>这是一个链接 <a href="https://xiaoliang-0225.github.io/liang.github.io/" title="小梁的空间">小梁的空间</a>。</p>
+<h3 id="网站和邮箱地址">网站和邮箱地址</h3>
+<p>使用尖括号可以很方便地把URL或者email地址变成可点击的链接。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;https://xiaoliang-0225.github.io/liang.github.io/ &gt;</span><br><span class="line">&lt;yiliang0225@163.com&gt;</span><br></pre></td></tr></table></figure>
+<p>效果如下：<br>
+<a href="https://xiaoliang-0225.github.io/liang.github.io/">https://xiaoliang-0225.github.io/liang.github.io/</a><br>
+<a href="mailto:yiliang0225@163.com">yiliang0225@163.com</a></p>
+<h3 id="带格式化的链接">带格式化的链接</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">这是一个链接 **[小梁的空间](https://xiaoliang-0225.github.io/liang.github.io/ &quot;小梁的空间&quot;)**。  </span><br><span class="line">这是一个链接 *[小梁的空间](https://xiaoliang-0225.github.io/liang.github.io/ &quot;小梁的空间&quot;)*。</span><br></pre></td></tr></table></figure>
+<p>效果如下：<br>
+这是一个链接 <strong><a href="https://xiaoliang-0225.github.io/liang.github.io/" title="小梁的空间">小梁的空间</a></strong>。<br>
+这是一个链接 <em><a href="https://xiaoliang-0225.github.io/liang.github.io/" title="小梁的空间">小梁的空间</a></em>。</p>
+<div class="note pink icon-padding flat"><i class="note-icon fa-solid fa-link"></i><p>未完待续</p>
+</div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://xiaoliang-0225.github.io/liang.github.io">小梁</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://xiaoliang-0225.github.io/liang.github.io/Markdown%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/">https://xiaoliang-0225.github.io/liang.github.io/Markdown%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://xiaoliang-0225.github.io/liang.github.io" target="_blank">小梁的空间</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/liang.github.io/tags/Markdown/">Markdown</a></div><div class="post-share"><div class="social-share" data-image="https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/article/markdown.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>赞助</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/article/%E5%BE%AE%E4%BF%A1.png" target="_blank"><img class="post-qr-code-img" src="https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/article/%E5%BE%AE%E4%BF%A1.png" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/article/%E6%94%AF%E4%BB%98%E5%AE%9D%E6%94%B6%E6%AC%BE.png" target="_blank"><img class="post-qr-code-img" src="https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/article/%E6%94%AF%E4%BB%98%E5%AE%9D%E6%94%B6%E6%AC%BE.png" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related full-width" href="/liang.github.io/IDEA%20%E6%B0%B8%E4%B9%85%E6%BF%80%E6%B4%BB/" title="IDEA永久激活"><img class="cover" src="https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/%E8%83%8C%E6%99%AF/idea.png" onerror="onerror=null;src='https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/on_the_way/404.png'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">IDEA永久激活</div></div><div class="info-2"><div class="info-item-1">IDEA 永久激活 IDEA 下载及更新安装 官方下载地址：https://www.jetbrains.com/idea/download ，下载最新旗舰版。如下：  下载完，直接安装即可，也可以替换之前的旧版本，这里不在演示安装，因为很简单 破解工具下载和使用 为了防止破解工具被删除，请通过文章末尾的公众号回复idea即可获取。 工具下载后，存放路径不要有汉字和空格，然后，记得先**解压工具，**解压后主要包含以下文件：  进入到破解工具下，执行 scripts...</div></div></div></a></nav><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%87%E9%A2%98"><span class="toc-number">1.</span> <span class="toc-text">标题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AE%B5%E8%90%BD"><span class="toc-number">2.</span> <span class="toc-text">段落</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8D%A2%E8%A1%8C"><span class="toc-number">3.</span> <span class="toc-text">换行</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E4%BD%93"><span class="toc-number">4.</span> <span class="toc-text">字体</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%95%E7%94%A8"><span class="toc-number">5.</span> <span class="toc-text">引用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%AD%E6%B3%95"><span class="toc-number">5.1.</span> <span class="toc-text">语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%9A%E4%B8%AA%E6%AE%B5%E8%90%BD%E7%9A%84%E5%9D%97%E5%BC%95%E7%94%A8"><span class="toc-number">5.2.</span> <span class="toc-text">多个段落的块引用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B5%8C%E5%A5%97%E5%9D%97%E5%BC%95%E7%94%A8"><span class="toc-number">5.3.</span> <span class="toc-text">嵌套块引用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%A6%E6%9C%89%E5%85%B6%E4%BB%96%E5%85%83%E7%B4%A0%E7%9A%84%E5%9D%97%E5%BC%95%E7%94%A8"><span class="toc-number">5.4.</span> <span class="toc-text">带有其他元素的块引用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%87%E9%A2%98-v2"><span class="toc-number">5.5.</span> <span class="toc-text">标题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%97%E8%A1%A8"><span class="toc-number">6.</span> <span class="toc-text">列表</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%89%E5%BA%8F%E5%88%97%E8%A1%A8"><span class="toc-number">6.1.</span> <span class="toc-text">有序列表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%A0%E5%BA%8F%E5%88%97%E8%A1%A8"><span class="toc-number">6.2.</span> <span class="toc-text">无序列表</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%93%BE%E6%8E%A5"><span class="toc-number">7.</span> <span class="toc-text">链接</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%99%E9%93%BE%E6%8E%A5%E5%A2%9E%E5%8A%A0-Title"><span class="toc-number">7.1.</span> <span class="toc-text">给链接增加 Title</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%91%E7%AB%99%E5%92%8C%E9%82%AE%E7%AE%B1%E5%9C%B0%E5%9D%80"><span class="toc-number">7.2.</span> <span class="toc-text">网站和邮箱地址</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%A6%E6%A0%BC%E5%BC%8F%E5%8C%96%E7%9A%84%E9%93%BE%E6%8E%A5"><span class="toc-number">7.3.</span> <span class="toc-text">带格式化的链接</span></a></li></ol></li></ol></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="footer_custom_text"><div id="runtime"></div></div><p id="ghbdages"><a class="github-badge" target="_blank" href="https://hexo.io/" style="margin-inline:5px"><img src="https://img.shields.io/badge/Frame-Hexo-blue?style=flat&amp;logo=hexo" title="博客框架为Hexo_v7.3.0"/></a><a class="github-badge" target="_blank" href="https://butterfly.js.org/" style="margin-inline:5px"><img src="https://img.shields.io/badge/Theme-Butterfly-6513df?style=flat&amp;logo=bitdefender" title="主题版本Butterfly_v5.3.5"/></a><a class="github-badge" target="_blank" href="https://github.com/" style="margin-inline:5px"><img src="https://img.shields.io/badge/Source-Github-d021d6?style=flat&amp;logo=GitHub" title="本站项目由Github托管"/></a><a class="github-badge" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" style="margin-inline:5px"><img src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&amp;logo=Claris" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"/></a></p></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><!--a.icon-V.hidden(onclick='switchNightMode()',  title=_p('rightside.night_mode_title'))// svg(width='25', height='25', viewBox='0 0 1024 1024')
+  //  use#modeicon(xlink:href='#icon-moon')--><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><!--button#to_comment(type="button" title=_p("rightside.scroll_to_comment") onclick="FixedCommentBtn();")--><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/liang.github.io/js/utils.js"></script><script src="/liang.github.io/js/main.js"></script><div class="js-pjax"><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
+  const option = null
+
+  const initValine = (el, path) => {
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyValine = () => {
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+
+    const valineConfig = {
+      el: '#vcomment',
+      appId: '0BO1TTxv7R3SRjokrnvOYLrU-gzGzoHsz',
+      appKey: 'PTYeulCJ4VvGrQ0X0XvsrNO7',
+      avatar: 'monsterid',
+      serverURLs: '',
+      placeholder: 'ヾﾉ≧∀≦)o快来评论一下吧!',
+      emojiMaps: "",
+      visitor: false,
+      ...option,
+      path: isShuoshuo ? path : (option && option.path) || window.location.pathname
+    }
+
+    new Valine(valineConfig)
+  }
+
+  const loadValine = async (el, path) => {
+    if (typeof Valine === 'function') {
+      initValine(el, path)
+    } else {
+      await btf.getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js')
+      initValine(el, path)
+    }
+  }
+
+  if (isShuoshuo) {
+    'Valine' === 'Valine'
+      ? window.shuoshuoComment = { loadComment: loadValine }
+      : window.loadOtherComment = loadValine
+    return
+  }
+
+  if ('Valine' === 'Valine' || !true) {
+    if (true) btf.loadComment(document.getElementById('vcomment'),loadValine)
+    else setTimeout(loadValine, 0)
+  } else {
+    window.loadOtherComment = loadValine
+  }
+})()</script></div><script src="/liang.github.io/js/easy-Danmaku.js"></script><script src="/liang.github.io/js/easy.js"></script><canvas id="universe"></canvas><script src="/liang.github.io/js/universe.js"></script><script src="/liang.github.io/js/footer_custom.js"></script><script src="/liang.github.io/js/custom/MemorialDayMode.js"></script><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-heart.min.js" async="async" mobile="true"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

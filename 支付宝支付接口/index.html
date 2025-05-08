@@ -1,0 +1,311 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>支付宝支付接口 | 小梁的空间</title><meta name="author" content="小梁"><meta name="copyright" content="小梁"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="官网： 网页&amp;移动应用">
+<meta property="og:type" content="article">
+<meta property="og:title" content="支付宝支付接口">
+<meta property="og:url" content="https://xiaoliang-0225.github.io/liang.github.io/%E6%94%AF%E4%BB%98%E5%AE%9D%E6%94%AF%E4%BB%98%E6%8E%A5%E5%8F%A3/index.html">
+<meta property="og:site_name" content="小梁的空间">
+<meta property="og:description" content="官网： 网页&amp;移动应用">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/article/%E6%94%AF%E4%BB%98%E5%AE%9D.png">
+<meta property="article:published_time" content="2022-03-11T03:44:49.000Z">
+<meta property="article:modified_time" content="2025-05-08T06:48:31.262Z">
+<meta property="article:author" content="小梁">
+<meta property="article:tag" content="支付宝">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/article/%E6%94%AF%E4%BB%98%E5%AE%9D.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "支付宝支付接口",
+  "url": "https://xiaoliang-0225.github.io/liang.github.io/%E6%94%AF%E4%BB%98%E5%AE%9D%E6%94%AF%E4%BB%98%E6%8E%A5%E5%8F%A3/",
+  "image": "https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/article/%E6%94%AF%E4%BB%98%E5%AE%9D.png",
+  "datePublished": "2022-03-11T03:44:49.000Z",
+  "dateModified": "2025-05-08T06:48:31.262Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "小梁",
+      "url": "https://xiaoliang-0225.github.io/liang.github.io/"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/liang.github.io/img/favicon.png"><link rel="canonical" href="https://xiaoliang-0225.github.io/liang.github.io/%E6%94%AF%E4%BB%98%E5%AE%9D%E6%94%AF%E4%BB%98%E6%8E%A5%E5%8F%A3/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/liang.github.io/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/liang.github.io/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '支付宝支付接口',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/liang.github.io/css/custom/twikoo_beautify.css"  media="defer" onload="this.media='all'"><link rel="stylesheet" href="/liang.github.io/css/waves.css"><link rel="stylesheet" href="/liang.github.io/css/universe.css"><link rel="stylesheet" href="/liang.github.io/css/footer_custom.css"><link rel="stylesheet" href="/liang.github.io/css/custom.css"><!-- include ./custom/sun_moon.pug--><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/liang.github.io/atom.xml" title="小梁的空间" type="application/atom+xml">
+<link rel="alternate" href="/liang.github.io/rss2.xml" title="小梁的空间" type="application/rss+xml">
+</head><body><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><!-- img.loading-img(class='nolazyload' src= (loading_img ? url_for(loading_img) : "/source/img/head_portrait.jpg") ) //- 替换为你的头像地址，或者在自定义引入的custom.css进行覆盖。--><img class="loading-img nolazyload" src="/liang.github.io/img/head_portrait.jpg"/><div class="loading-image-dot"></div><div id="loading-percentage">0%</div></div></div><script async="async">const loadingPercentage = document.getElementById("loading-percentage");
+loadingPercentage.style.color = "black";
+let loadingPercentageTimer = setInterval(function() {
+    var progressBar = document.querySelector(".pace-progress");
+    if (!progressBar) return
+    var currentValue = progressBar.getAttribute("data-progress-text");
+    if (currentValue !== loadingPercentage.textContent) {
+        loadingPercentage.textContent = currentValue;
+        if (currentValue === "100%") {
+            clearInterval(loadingPercentageTimer);
+        }
+    }
+}, 100);
+const preloader = {
+    endLoading: () => {
+        document.body.style.overflow = 'auto';
+        document.getElementById('loading-box').classList.add("loaded")
+    },
+    initLoading: () => {
+        document.body.style.overflow = '';
+        document.getElementById('loading-box').classList.remove("loaded")
+    }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();}, 6000)
+document.getElementById('loading-box').addEventListener('click',()=> {preloader.endLoading()})
+if (false) {
+    document.addEventListener('pjax:send', () => { preloader.initLoading() })
+    document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/on_the_way/favicon.png" onerror="this.onerror=null;this.src='https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/on_the_way/404.png'" alt="avatar"/></div><div class="site-data text-center"><a href="/liang.github.io/archives/"><div class="headline">文章</div><div class="length-num">21</div></a><a href="/liang.github.io/tags/"><div class="headline">标签</div><div class="length-num">17</div></a><a href="/liang.github.io/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/liang.github.io/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/liang.github.io/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/liang.github.io/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/liang.github.io/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/liang.github.io/gallery/"><i class="fa-fw fa fa-camera-retro"></i><span> 相册</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/liang.github.io/links/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/liang.github.io/comment/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/liang.github.io/atom.xml"><i class="fa-fw fas fa-rss"></i><span> RSS订阅</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/article/%E6%94%AF%E4%BB%98%E5%AE%9D.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/liang.github.io/"><img class="site-icon" src="/liang.github.io/img/20151215110435616.gif" alt="Logo"><span class="site-name">小梁的空间</span></a><a class="nav-page-title" href="/liang.github.io/"><span class="site-name">支付宝支付接口</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/liang.github.io/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/liang.github.io/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/liang.github.io/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/liang.github.io/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/liang.github.io/gallery/"><i class="fa-fw fa fa-camera-retro"></i><span> 相册</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/liang.github.io/links/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/liang.github.io/comment/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/liang.github.io/atom.xml"><i class="fa-fw fas fa-rss"></i><span> RSS订阅</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">支付宝支付接口</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-03-11T03:44:49.000Z" title="发表于 2022-03-11 11:44:49">2022-03-11</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-05-08T06:48:31.262Z" title="更新于 2025-05-08 14:48:31">2025-05-08</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/liang.github.io/categories/%E7%AC%AC%E4%B8%89%E6%96%B9%E6%94%AF%E4%BB%98/">第三方支付</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><p><strong>官网：</strong> <a target="_blank" rel="noopener" href="https://open.alipay.com/">网页&amp;移动应用</a></p>
+<span id="more"></span>
+<h2 id="接口使用">接口使用</h2>
+<h3 id="支付流程">支付流程</h3>
+<ol>
+<li>
+<p>前端请求访问控制层 “/alipay” 接口</p>
+<p>1.1 初始化支付 DefaultAlipayClient 对象</p>
+<p>1.2 使用 AlipayTradePagePayRequest（网页支付请求对象） 对象设置请求参数</p>
+<ul>
+<li>
+<p>设置返回地址和异步返回地址</p>
+</li>
+<li>
+<p>设置业务内容（json）</p>
+</li>
+</ul>
+<p>1.3 获取请求体的html代码</p>
+<p>1.4 响应请求体后通过</p>
+</li>
+<li>
+<p>接受返回结果<br>
+2.1 支付宝支付后会调用返回接口（同步接口异常会调用异步返回接口）<br>
+2.2 通过Map获取参数<br>
+<strong>2.3 验签 AlipaySignature 对象的 rsaCheckV1() 验签</strong></p>
+<ul>
+<li><strong>验证成功 执行自定义的代码逻辑</strong></li>
+<li><strong>验证失败 响应错误信息</strong></li>
+</ul>
+</li>
+</ol>
+<h3 id="使用">使用</h3>
+<ul>
+<li>引入依赖</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;com.alipay.sdk&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;alipay-sdk-java&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;4.13.58.ALL&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.apache.httpcomponents&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;httpclient&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;4.5.3&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>导入配置类(将准备的参数赋值给指定常量)</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">/* *</span><br><span class="line"> *类名：AlipayConfig</span><br><span class="line"> *功能：基础配置类</span><br><span class="line"> *详细：设置帐户有关信息及返回路径</span><br><span class="line"> *说明：</span><br><span class="line"> *以下代码只是为了方便商户测试而提供的样例代码，商户可以根据自己网站的需要，按照技术文档编写,并非一定要使用该代码。</span><br><span class="line"> *该代码仅供学习和研究支付宝接口使用，只是提供一个参考。</span><br><span class="line"> */</span><br><span class="line">public class AlipayConfig &#123;</span><br><span class="line"></span><br><span class="line">    // 商户appid , 收款账号既是您的APPID对应支付宝账号</span><br><span class="line">    public static String APPID = &quot;&quot;;</span><br><span class="line"></span><br><span class="line">    // 私钥 pkcs8格式的</span><br><span class="line">    public static String RSA_PRIVATE_KEY = &quot;&quot;;</span><br><span class="line"></span><br><span class="line">    // 服务器异步通知页面路径 需http://或者https://格式的完整路径，不能加?id=123这类自定义参数，必须外网可以正常访问</span><br><span class="line">    public static String notify_url = &quot;&quot;;</span><br><span class="line"></span><br><span class="line">    // 页面跳转同步通知页面路径 需http://或者https://格式的完整路径，不能加?id=123这类自定义参数，必须外网可以正常访问 商户可以自定义同步跳转地址</span><br><span class="line">    public static String return_url = &quot;&quot;;</span><br><span class="line"></span><br><span class="line">    // 请求网关地址</span><br><span class="line">    public static String URL = &quot;&quot;;</span><br><span class="line"></span><br><span class="line">    // 编码</span><br><span class="line">    public static String CHARSET = &quot;UTF-8&quot;;</span><br><span class="line"></span><br><span class="line">    // 返回格式</span><br><span class="line">    public static String FORMAT = &quot;json&quot;;</span><br><span class="line"></span><br><span class="line">    // 支付宝公钥 ， 查看地址：https://openhome.alipay.com/platform/keyManage.htm 对应APPID下的支付宝公钥。</span><br><span class="line">    public static String ALIPAY_PUBLIC_KEY = &quot;&quot;;</span><br><span class="line"></span><br><span class="line">    // 日志记录目录</span><br><span class="line">    public static String log_path = &quot;/log&quot;;</span><br><span class="line"></span><br><span class="line">    // 签名方式 RSA2</span><br><span class="line">    public static String SIGNTYPE = &quot;RSA2&quot;;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>日志工具类</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">import java.io.FileWriter;</span><br><span class="line">import java.io.IOException;</span><br><span class="line"></span><br><span class="line">public class LogFile &#123;</span><br><span class="line">    /**</span><br><span class="line">     * 写日志，方便测试（看网站需求，也可以改成把记录存入数据库）</span><br><span class="line">     * @param sWord 要写入日志里的文本内容</span><br><span class="line">     */</span><br><span class="line">    public static void logResult(String sWord) &#123;</span><br><span class="line">        FileWriter writer = null;</span><br><span class="line">        try &#123;</span><br><span class="line">            writer = new FileWriter(AlipayConfig.log_path + &quot;alipay_log_&quot; + System.currentTimeMillis()+&quot;.txt&quot;);</span><br><span class="line">            writer.write(sWord);</span><br><span class="line">        &#125; catch (Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125; finally &#123;</span><br><span class="line">            if (writer != null) &#123;</span><br><span class="line">                try &#123;</span><br><span class="line">                    writer.close();</span><br><span class="line">                &#125; catch (IOException e) &#123;</span><br><span class="line">                    e.printStackTrace();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>官方demo
+<ul>
+<li>JSP代码</li>
+</ul>
+</li>
+</ul>
+<p><button onclick="window.open('/alipay/notify_url.jsp')">手机网站2.0支付异步通知</button><br>
+<button onclick="window.open('/alipay/return_url.jsp')">手机网站2.0支付同步通知</button><br>
+<button onclick="window.open('/alipay/wappay/pay.jsp')">手机网站2.0支付(接口名：alipay.trade.wap.pay)</button><br>
+<button onclick="window.open('/alipay/wappay/query.jsp')">手机网站2.0订单查询 (接口名：alipay.trade.query)</button><br>
+<button onclick="window.open('/alipay/wappay/refund.jsp')">手机网站2.0订单退款  (接口名：alipay.trade.refund)</button><br>
+<button onclick="window.open('/alipay/wappay/refundquery.jsp')">手机网站2.0订单退款查询(接口名：alipay.trade.fastpay.refund.query)</button><br>
+<button onclick="window.open('/alipay/wappay/downloadurl.jsp')">手机网站2.0账单下载(接口名：alipay.data.dataservice.bill.downloadurl.query)</button></p>
+<ul>
+<li>SDK使用</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br></pre></td><td class="code"><pre><span class="line">import com.alipay.api.AlipayApiException;</span><br><span class="line">import com.alipay.api.AlipayClient;</span><br><span class="line">import com.alipay.api.DefaultAlipayClient;</span><br><span class="line">import com.alipay.api.domain.AlipayTradeWapPayModel;</span><br><span class="line">import com.alipay.api.internal.util.AlipaySignature;</span><br><span class="line">import com.alipay.api.request.AlipayTradePagePayRequest;</span><br><span class="line">import org.slf4j.Logger;</span><br><span class="line">import org.slf4j.LoggerFactory;</span><br><span class="line">import org.springframework.web.bind.annotation.GetMapping;</span><br><span class="line">import org.springframework.web.bind.annotation.PostMapping;</span><br><span class="line">import org.springframework.web.bind.annotation.RequestMapping;</span><br><span class="line">import org.springframework.web.bind.annotation.RestController;</span><br><span class="line"></span><br><span class="line">import javax.servlet.http.HttpServletRequest;</span><br><span class="line">import java.io.UnsupportedEncodingException;</span><br><span class="line">import java.util.HashMap;</span><br><span class="line">import java.util.Iterator;</span><br><span class="line">import java.util.Map;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * @author: liangbaichuan</span><br><span class="line"> * @Title: AlipayController</span><br><span class="line"> * @create: 2018-03-11 11:14</span><br><span class="line"> */</span><br><span class="line">@RestController</span><br><span class="line">public class AlipayController &#123;</span><br><span class="line"></span><br><span class="line">    private static final Logger log = LoggerFactory.getLogger(AlipayController.class);</span><br><span class="line"></span><br><span class="line">    @PostMapping(&quot;/alipay&quot;)</span><br><span class="line">    public String alipay(HttpServletRequest request) throws UnsupportedEncodingException &#123;</span><br><span class="line">        // 根据订单编号查询订单表获取订单金额</span><br><span class="line"></span><br><span class="line">        // 初始化AlipayClient</span><br><span class="line">        AlipayClient alipayClient = new DefaultAlipayClient(</span><br><span class="line">                AlipayConfig.URL,</span><br><span class="line">                AlipayConfig.APPID,</span><br><span class="line">                AlipayConfig.RSA_PRIVATE_KEY,</span><br><span class="line">                AlipayConfig.FORMAT,</span><br><span class="line">                AlipayConfig.CHARSET,</span><br><span class="line">                AlipayConfig.ALIPAY_PUBLIC_KEY,</span><br><span class="line">                AlipayConfig.SIGNTYPE</span><br><span class="line"></span><br><span class="line">        );</span><br><span class="line"></span><br><span class="line">        // 设置请求参数</span><br><span class="line">        AlipayTradePagePayRequest alipayRequest = new AlipayTradePagePayRequest();</span><br><span class="line">        // 设置同步地址</span><br><span class="line">        alipayRequest.setReturnUrl(AlipayConfig.return_url);</span><br><span class="line">        // 设置异步通知地址</span><br><span class="line">        alipayRequest.setNotifyUrl(AlipayConfig.notify_url);</span><br><span class="line"></span><br><span class="line">        // 商户订单号，商户网站订单系统中唯一订单号，必填</span><br><span class="line">        String out_trade_no = new String(request.getParameter(&quot;WIDout_trade_no&quot;).getBytes(&quot;ISO-8859-1&quot;),&quot;UTF-8&quot;);</span><br><span class="line">        // 订单名称，必填</span><br><span class="line">        String subject = new String(request.getParameter(&quot;WIDsubject&quot;).getBytes(&quot;ISO-8859-1&quot;),&quot;UTF-8&quot;);</span><br><span class="line">        System.out.println(subject);</span><br><span class="line">        // 付款金额，必填</span><br><span class="line">        String total_amount=new String(request.getParameter(&quot;WIDtotal_amount&quot;).getBytes(&quot;ISO-8859-1&quot;),&quot;UTF-8&quot;);</span><br><span class="line">        // 商品描述，可空</span><br><span class="line">        String body = new String(request.getParameter(&quot;WIDbody&quot;).getBytes(&quot;ISO-8859-1&quot;),&quot;UTF-8&quot;);</span><br><span class="line">        // 超时时间 可空</span><br><span class="line">        String timeout_express=&quot;2m&quot;;</span><br><span class="line">        // 销售产品码 必填</span><br><span class="line">        String product_code=&quot;QUICK_WAP_WAY&quot;;</span><br><span class="line"></span><br><span class="line">        // 封装请求支付信息</span><br><span class="line">        AlipayTradeWapPayModel model=new AlipayTradeWapPayModel();</span><br><span class="line">        model.setOutTradeNo(out_trade_no);</span><br><span class="line">        model.setSubject(subject);</span><br><span class="line">        model.setTotalAmount(total_amount);</span><br><span class="line">        model.setBody(body);</span><br><span class="line">        model.setTimeoutExpress(timeout_express);</span><br><span class="line">        model.setProductCode(product_code);</span><br><span class="line">        alipayRequest.setBizModel(model);</span><br><span class="line"></span><br><span class="line">        // 请求</span><br><span class="line">        String result = &quot;&quot;;</span><br><span class="line">        try &#123;</span><br><span class="line">            result = alipayClient.pageExecute(alipayRequest).getBody();</span><br><span class="line">            System.out.println(result);</span><br><span class="line">        &#125; catch (AlipayApiException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        // 输出</span><br><span class="line">        return result;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @GetMapping(&quot;/returnResult&quot;)</span><br><span class="line">    public String returnResult(HttpServletRequest request) throws UnsupportedEncodingException &#123;</span><br><span class="line">        log.info(&quot;收到同步回调&quot;);</span><br><span class="line"></span><br><span class="line">        //获取支付宝GET过来反馈信息</span><br><span class="line">        Map&lt;String,String&gt; params = new HashMap&lt;String,String&gt;();</span><br><span class="line">        Map requestParams = request.getParameterMap();</span><br><span class="line">        for (Iterator iter = requestParams.keySet().iterator(); iter.hasNext();) &#123;</span><br><span class="line">            String name = (String) iter.next();</span><br><span class="line">            String[] values = (String[]) requestParams.get(name);</span><br><span class="line">            String valueStr = &quot;&quot;;</span><br><span class="line">            for (int i = 0; i &lt; values.length; i++) &#123;</span><br><span class="line">                valueStr = (i == values.length - 1) ? valueStr + values[i]</span><br><span class="line">                        : valueStr + values[i] + &quot;,&quot;;</span><br><span class="line">            &#125;</span><br><span class="line">            //乱码解决，这段代码在出现乱码时使用。如果mysign和sign不相等也可以使用这段代码转化</span><br><span class="line">            valueStr = new String(valueStr.getBytes(&quot;ISO-8859-1&quot;), &quot;utf-8&quot;);</span><br><span class="line">            params.put(name, valueStr);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        //获取支付宝的通知返回参数，可参考技术文档中页面跳转同步通知参数列表(以下仅供参考)//</span><br><span class="line">        //商户订单号</span><br><span class="line">        String out_trade_no = new String(request.getParameter(&quot;out_trade_no&quot;).getBytes(&quot;ISO-8859-1&quot;),&quot;UTF-8&quot;);</span><br><span class="line"></span><br><span class="line">        //支付宝交易号</span><br><span class="line"></span><br><span class="line">        String trade_no = new String(request.getParameter(&quot;trade_no&quot;).getBytes(&quot;ISO-8859-1&quot;),&quot;UTF-8&quot;);</span><br><span class="line">        //获取支付宝的通知返回参数，可参考技术文档中页面跳转同步通知参数列表(以上仅供参考)//</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        //计算得出通知验证结果</span><br><span class="line">        //boolean AlipaySignature.rsaCheckV1(Map&lt;String, String&gt; params, String publicKey, String charset, String sign_type)</span><br><span class="line">        boolean verify_result = false;</span><br><span class="line">        try &#123;</span><br><span class="line">             verify_result = AlipaySignature.rsaCheckV1(params, AlipayConfig.ALIPAY_PUBLIC_KEY, AlipayConfig.CHARSET, &quot;RSA2&quot;);</span><br><span class="line">        &#125; catch (AlipayApiException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        if (verify_result)&#123; //验证成功</span><br><span class="line">            return &quot;&lt;script&gt;location.href=&#x27;success.html&#x27;&lt;/script&gt;&quot;;</span><br><span class="line">        &#125;else&#123; //验证失败</span><br><span class="line">            return &quot;&lt;script&gt;location.href=&#x27;error.html&#x27;&lt;/script&gt;&quot;;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @RequestMapping(&quot;/notifyResult&quot;)</span><br><span class="line">    public String notifyResult(HttpServletRequest request) throws UnsupportedEncodingException &#123;</span><br><span class="line">        //获取支付宝POST过来反馈信息</span><br><span class="line">        Map&lt;String,String&gt; params = new HashMap&lt;String,String&gt;();</span><br><span class="line">        Map requestParams = request.getParameterMap();</span><br><span class="line">        for (Iterator iter = requestParams.keySet().iterator(); iter.hasNext();) &#123;</span><br><span class="line">            String name = (String) iter.next();</span><br><span class="line">            String[] values = (String[]) requestParams.get(name);</span><br><span class="line">            String valueStr = &quot;&quot;;</span><br><span class="line">            for (int i = 0; i &lt; values.length; i++) &#123;</span><br><span class="line">                valueStr = (i == values.length - 1) ? valueStr + values[i]</span><br><span class="line">                        : valueStr + values[i] + &quot;,&quot;;</span><br><span class="line">            &#125;</span><br><span class="line">            //乱码解决，这段代码在出现乱码时使用。如果mysign和sign不相等也可以使用这段代码转化</span><br><span class="line">            //valueStr = new String(valueStr.getBytes(&quot;ISO-8859-1&quot;), &quot;gbk&quot;);</span><br><span class="line">            params.put(name, valueStr);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        //获取支付宝的通知返回参数，可参考技术文档中页面跳转同步通知参数列表(以下仅供参考)//</span><br><span class="line">        //商户订单号</span><br><span class="line"></span><br><span class="line">        String out_trade_no = new String(request.getParameter(&quot;out_trade_no&quot;).getBytes(&quot;ISO-8859-1&quot;),&quot;UTF-8&quot;);</span><br><span class="line">        //支付宝交易号</span><br><span class="line"></span><br><span class="line">        String trade_no = new String(request.getParameter(&quot;trade_no&quot;).getBytes(&quot;ISO-8859-1&quot;),&quot;UTF-8&quot;);</span><br><span class="line"></span><br><span class="line">        //交易状态</span><br><span class="line">        String trade_status = new String(request.getParameter(&quot;trade_status&quot;).getBytes(&quot;ISO-8859-1&quot;),&quot;UTF-8&quot;);</span><br><span class="line"></span><br><span class="line">        //获取支付宝的通知返回参数，可参考技术文档中页面跳转同步通知参数列表(以上仅供参考)//</span><br><span class="line">        //计算得出通知验证结果</span><br><span class="line">        //boolean AlipaySignature.rsaCheckV1(Map&lt;String, String&gt; params, String publicKey, String charset, String sign_type)</span><br><span class="line">        boolean verify_result  = false ;</span><br><span class="line">        try &#123;</span><br><span class="line">            verify_result = AlipaySignature.rsaCheckV1(params, AlipayConfig.ALIPAY_PUBLIC_KEY, AlipayConfig.CHARSET, &quot;RSA2&quot;);</span><br><span class="line">        &#125; catch (AlipayApiException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        if (verify_result)&#123; //验证成功</span><br><span class="line"></span><br><span class="line">            //——请根据您的业务逻辑来编写程序（以下代码仅作参考）——</span><br><span class="line">            if(trade_status.equals(&quot;TRADE_FINISHED&quot;))&#123;</span><br><span class="line">                //判断该笔订单是否在商户网站中已经做过处理</span><br><span class="line">                //如果没有做过处理，根据订单号（out_trade_no）在商户网站的订单系统中查到该笔订单的详细，并执行商户的业务程序</span><br><span class="line">                //请务必判断请求时的total_fee、seller_id与通知时获取的total_fee、seller_id为一致的</span><br><span class="line">                //如果有做过处理，不执行商户的业务程序</span><br><span class="line"></span><br><span class="line">                //注意：</span><br><span class="line">                //如果签约的是可退款协议，退款日期超过可退款期限后（如三个月可退款），支付宝系统发送该交易状态通知</span><br><span class="line">                //如果没有签约可退款协议，那么付款完成后，支付宝系统发送该交易状态通知。</span><br><span class="line">            &#125; else if (trade_status.equals(&quot;TRADE_SUCCESS&quot;))&#123;</span><br><span class="line">                //判断该笔订单是否在商户网站中已经做过处理</span><br><span class="line">                //如果没有做过处理，根据订单号（out_trade_no）在商户网站的订单系统中查到该笔订单的详细，并执行商户的业务程序</span><br><span class="line">                //请务必判断请求时的total_fee、seller_id与通知时获取的total_fee、seller_id为一致的</span><br><span class="line">                //如果有做过处理，不执行商户的业务程序</span><br><span class="line"></span><br><span class="line">                //注意：</span><br><span class="line">                //如果签约的是可退款协议，那么付款完成后，支付宝系统发送该交易状态通知。</span><br><span class="line">            &#125;</span><br><span class="line">            return  &quot;&quot;;</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">            return null;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>配置类中的常量可以通过配置文件注入</li>
+</ul>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://xiaoliang-0225.github.io/liang.github.io">小梁</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://xiaoliang-0225.github.io/liang.github.io/%E6%94%AF%E4%BB%98%E5%AE%9D%E6%94%AF%E4%BB%98%E6%8E%A5%E5%8F%A3/">https://xiaoliang-0225.github.io/liang.github.io/%E6%94%AF%E4%BB%98%E5%AE%9D%E6%94%AF%E4%BB%98%E6%8E%A5%E5%8F%A3/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://xiaoliang-0225.github.io/liang.github.io" target="_blank">小梁的空间</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/liang.github.io/tags/%E6%94%AF%E4%BB%98%E5%AE%9D/">支付宝</a></div><div class="post-share"><div class="social-share" data-image="https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/article/%E6%94%AF%E4%BB%98%E5%AE%9D.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>赞助</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/article/%E5%BE%AE%E4%BF%A1.png" target="_blank"><img class="post-qr-code-img" src="https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/article/%E5%BE%AE%E4%BF%A1.png" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/article/%E6%94%AF%E4%BB%98%E5%AE%9D%E6%94%B6%E6%AC%BE.png" target="_blank"><img class="post-qr-code-img" src="https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/article/%E6%94%AF%E4%BB%98%E5%AE%9D%E6%94%B6%E6%AC%BE.png" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/liang.github.io/RabbitMQ%E9%9B%86%E7%BE%A4%E6%90%AD%E5%BB%BA/" title="RabbitMQ集群搭建"><img class="cover" src="https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/on_the_way/index_img.jpg" onerror="onerror=null;src='https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/on_the_way/404.png'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">RabbitMQ集群搭建</div></div><div class="info-2"><div class="info-item-1">LINUX 搭建集群 修改每台机器的主机名称 1vi /etc/hostname  在每台服务器中配置其他服务器 hosts文件，让各个节点都能互相识别对方 1vi /etc/hosts 下图效果  确保各个节点的cookie文件使用的是同一个值 {@node2[服务主机名称] } 1scp /var/ib/rabbitmq/.erlang.cookie root@node2:/ar/ib/rabbitmg/.erlang.cookie I 启动RabbitMQ服务,顺带启动Erlang虚拟机和RbbitMQ应用服务 1rabbitmq-server -detached 在其他主机执行 1234rabbitmqctl stop_ app # 关闭服务  (rabbitmqctl stop会将Erlang 虚拟机关闭, rabbitmqct! stop. app只关闭RabbitMQ服务)rabbitmqctl reset # 重置rabbitmqctl join. _cluster rabbit@node1 #[主机名称] #加入到第一台主机中rabbitmqctl...</div></div></div></a><a class="pagination-related" href="/liang.github.io/RabbitMQ%20%E5%A6%82%E4%BD%95%E4%BF%9D%E8%AF%81%E6%B6%88%E6%81%AF%E7%9A%84%E5%8F%AF%E9%9D%A0%E4%BC%A0%E8%BE%93/" title="RabbitMQ 如何保证消息的可靠传输"><img class="cover" src="https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/on_the_way/index_img.jpg" onerror="onerror=null;src='https://liang-git.oss-cn-beijing.aliyuncs.com/hexo/on_the_way/404.png'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">RabbitMQ 如何保证消息的可靠传输</div></div><div class="info-2"><div class="info-item-1">可靠传输 在RabbitMQ中，一个消息从产生到被消费大致会经过三个步骤，生产者生产消息，消息投递到RabbitMQ，RabbitMQ再将消息推送到消费者（或消费者拉取），最终消费者将这条消息成功消费。消息的可靠传输，就是确保消息能够百分百从生产者发送到服务器，在从服务器发送到消费者。 所以消息丢失也可以划分为三种情况——生产者、消息队列、消费者。  生产者投递消息失败 事务机制 使用 RabbitMQ 的事务功能，此时可以选择用 RabbitMQ 提供的事务功能，就是生产者发送数据之前开启 RabbitMQ 事务 channel.txSelect，然后发送消息，如果消息没有成功被 RabbitMQ 接收到，那么生产者会收到异常报错，此时就可以回滚事务 channel.txRollback，然后重试发送消息；如果收到了消息，那么可以提交事务 channel.txCommit。 12345678910`// 开启事务``channel.txSelect();``try &#123;`    `// 发送消息``&#125; catch(Exception e) &#123;`  ...</div></div></div></a></nav><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%A5%E5%8F%A3%E4%BD%BF%E7%94%A8"><span class="toc-number">1.</span> <span class="toc-text">接口使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%94%AF%E4%BB%98%E6%B5%81%E7%A8%8B"><span class="toc-number">1.1.</span> <span class="toc-text">支付流程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8"><span class="toc-number">1.2.</span> <span class="toc-text">使用</span></a></li></ol></li></ol></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="footer_custom_text"><div id="runtime"></div></div><p id="ghbdages"><a class="github-badge" target="_blank" href="https://hexo.io/" style="margin-inline:5px"><img src="https://img.shields.io/badge/Frame-Hexo-blue?style=flat&amp;logo=hexo" title="博客框架为Hexo_v7.3.0"/></a><a class="github-badge" target="_blank" href="https://butterfly.js.org/" style="margin-inline:5px"><img src="https://img.shields.io/badge/Theme-Butterfly-6513df?style=flat&amp;logo=bitdefender" title="主题版本Butterfly_v5.3.5"/></a><a class="github-badge" target="_blank" href="https://github.com/" style="margin-inline:5px"><img src="https://img.shields.io/badge/Source-Github-d021d6?style=flat&amp;logo=GitHub" title="本站项目由Github托管"/></a><a class="github-badge" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" style="margin-inline:5px"><img src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&amp;logo=Claris" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"/></a></p></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><!--a.icon-V.hidden(onclick='switchNightMode()',  title=_p('rightside.night_mode_title'))// svg(width='25', height='25', viewBox='0 0 1024 1024')
+  //  use#modeicon(xlink:href='#icon-moon')--><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><!--button#to_comment(type="button" title=_p("rightside.scroll_to_comment") onclick="FixedCommentBtn();")--><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/liang.github.io/js/utils.js"></script><script src="/liang.github.io/js/main.js"></script><div class="js-pjax"><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
+  const option = null
+
+  const initValine = (el, path) => {
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyValine = () => {
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+
+    const valineConfig = {
+      el: '#vcomment',
+      appId: '0BO1TTxv7R3SRjokrnvOYLrU-gzGzoHsz',
+      appKey: 'PTYeulCJ4VvGrQ0X0XvsrNO7',
+      avatar: 'monsterid',
+      serverURLs: '',
+      placeholder: 'ヾﾉ≧∀≦)o快来评论一下吧!',
+      emojiMaps: "",
+      visitor: false,
+      ...option,
+      path: isShuoshuo ? path : (option && option.path) || window.location.pathname
+    }
+
+    new Valine(valineConfig)
+  }
+
+  const loadValine = async (el, path) => {
+    if (typeof Valine === 'function') {
+      initValine(el, path)
+    } else {
+      await btf.getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js')
+      initValine(el, path)
+    }
+  }
+
+  if (isShuoshuo) {
+    'Valine' === 'Valine'
+      ? window.shuoshuoComment = { loadComment: loadValine }
+      : window.loadOtherComment = loadValine
+    return
+  }
+
+  if ('Valine' === 'Valine' || !true) {
+    if (true) btf.loadComment(document.getElementById('vcomment'),loadValine)
+    else setTimeout(loadValine, 0)
+  } else {
+    window.loadOtherComment = loadValine
+  }
+})()</script></div><script src="/liang.github.io/js/easy-Danmaku.js"></script><script src="/liang.github.io/js/easy.js"></script><canvas id="universe"></canvas><script src="/liang.github.io/js/universe.js"></script><script src="/liang.github.io/js/footer_custom.js"></script><script src="/liang.github.io/js/custom/MemorialDayMode.js"></script><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-heart.min.js" async="async" mobile="true"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
